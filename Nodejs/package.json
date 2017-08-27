@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "hello Nodejs",
+  "main": "test1.js",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-rev": "^8.0.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

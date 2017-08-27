@@ -1,0 +1,15 @@
+@charset "UTF-8";
+ul li a {
+  display: block;
+}
+
+ul li a {
+  display: block;
+  color: #ccc;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+/*# sourceMappingURL=bar.css.map */

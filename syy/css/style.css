@@ -1,0 +1,29 @@
+*{
+	padding:0;
+	margin: 0;
+	border:none;
+	/*16px=1em;*/
+}
+li,ul{
+	list-style: none;
+}
+.none{display: none;}
+a{
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+html,body{background:#fff;}
+body,ol,ul,h1,h2,h3,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,img{margin:0;padding:0;}
+html,body{height:100%!important; background-color: #21232F;font-family: '微软雅黑' !important;}
+body,button,input,select,textarea{font:12px/1.5 Tahoma,Arial,'Hiragino Sans GB','Microsoft YaHei',\5b8b\4f53,sans-serif;}
+h1,h2,h3,h5,h6{font-size:100%;}
+ul,ol,dl{list-style:none;}
+ul.default{list-style:disc inside;}
+ol.default{list-style:decimal inside;}
+fieldset,img{border:0 none;}
+table{border-collapse:collapse;border-spacing:0;}

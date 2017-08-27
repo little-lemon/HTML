@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>终端日志</title>
+<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="./css/terminallog-3.css" />
+<script src="./js/jquery-1.11.1.js"></script>
+<script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="./js/terminallog-3.js"></script>
+<script type="text/javascript" src="./jedate/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./jedate/jquery.jedate.js"></script>
+<link type="text/css" rel="stylesheet" href="./jedate/skin/jedate.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="raw" >
+		<label class="glyphicon glyphicon-th-list">&nbsp;终端日志</label>
+		</div>
+		
+		<div class="row queryarea">
+    		<form>
+    			<!--第一行-->
+    			<div class="col-sm-12 col-md-12 col-lg-12">
+    				<div class="col-lg-5 col-md-5 col-sm-5">
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname">开始时间</label>
+							<input class="forminput workinput wicon" type="text" id="search_fromtime"/>
+    					</div>
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname">应用名称</label>
+	    					<input type="text" class="forminput" />
+    					</div>    					
+    				</div>
+    				<div class="col-lg-5 col-md-5 col-sm-5">
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname">用户名</label>
+	    					<input type="text" class="forminput" />
+    					</div>
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname" style="letter-spacing: 4px;">URL</label>
+	    					<input type="text" class="forminput" />
+    					</div>   
+    				</div>
+    				<div class="col-lg-2 col-md-2 col-sm-2">
+    					<div class="col-sm-12 col-md-12 col-lg-12">
+    						<button class="querybtn">查询</button>	
+    					</div>   
+    				</div>
+    			</div>
+    			<!--隐藏区域-->
+    			
+    			<!--第二行-->
+    			<div class="col-sm-12 col-md-12 col-lg-12 twoline" style="margin-top:10px;">
+    				<div class="col-lg-5 col-md-5 col-sm-5">
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname" style="letter-spacing: 3px;">用户IP</label>
+	    					<input type="text" class="forminput" />
+    					</div>
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname" style="letter-spacing: 8px;">源IP</label>
+	    					<input type="text" class="forminput" />
+    					</div>    					
+    				</div>
+    				<div class="col-lg-5 col-md-5 col-sm-5">
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname">目标IP</label>
+	    					<input type="text" class="forminput" />
+    					</div>
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname">源端口</label>
+	    					<input type="text" class="forminput" />   
+    					</div>   
+    				</div>
+    			</div>
+    			<!--第三行-->
+    			<div class="col-sm-12 col-md-12 col-lg-12 threeline" style="margin-top:10px;">
+    				<div class="col-lg-5 col-md-5 col-sm-5">
+    					<div class="col-lg-6 col-md-6 col-sm-6">
+    						<label class="lname">目标端口</label>
+	    					<input type="text" class="forminput" />    
+    					</div>    
+    				</div>
+    			</div>    			    			
+    			
+    		</form>
+    		<div class="col-sm-12 col-md-12 col-lg-12" style="text-align: center;margin-top: 10px;">
+    			<a class="downarrow" id="showsearch"><img src="images/expand.png"/></a>
+    		</div>
+    	</div>
+		
+		<div class="tbw">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="right"  style="padding-left:30px;">序号</th>
+						<th>应用名称</th>
+						<th>发生时间</th>
+						<th>用户</th>
+						<th>用户IP</th>
+						<th>源IP</th>
+						<th>目标IP</th>
+						<th>发送流量（M）</th>
+						<th>接收流量（M）</th>
+						<th>源端口</th>
+						<th>目的端口</th>
+						<th style="padding-right:30px;">URL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="right">1</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td class="tdlast" style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">2</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">3</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">4</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">5</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">6</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">7</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">8</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">9</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">10</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-lg-6 left">
+					每页显示&nbsp;
+					<select class="bcolor">
+						<option>13</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+					</select>&nbsp;条&nbsp;|&nbsp;共40条
+				</div>
+				<div class="col-lg-6 right">
+					第&nbsp;<select class="bcolor">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>&nbsp;页&nbsp;|&nbsp;共3页&nbsp; <label class="border pre">上一页</label>&nbsp;&nbsp;<label class="border next">下一页</label>
+				</div> 
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

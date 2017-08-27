@@ -1,0 +1,91 @@
+.publicTitle{
+	width: 100%;
+	padding: 8px 1% 0;
+	max-width: 1920px;
+	min-width: 1120px;
+}
+.publicTitle .logTitle{
+	color:#fff;
+	font-size: 16px;
+	float: left;
+}
+.publicTitle .logTitle img{
+	cursor:pointer;
+}
+.publicTitle .logTitle span{
+	position: relative;
+	top:2px;
+}
+
+.publicTitle .back{
+	display: inline; float: right;margin-right: 1%;
+	margin-top: 6px;
+}
+
+/*头部按钮样式*/
+.publicTitle .headicon{
+	font-size: 14px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.publicTitle .headicon img{
+	width: 16px;
+}
+.publicTitle .headicon:hover{
+	color: #FFFFFF;
+}
+
+.publicNav{
+	width: 100%;
+	padding: 8px 1% 0;
+	max-width: 1920px;
+	min-width: 1120px;
+}
+.publicNav .chooseTime{
+	width: 100%;
+	height: auto;
+    padding: 17px 31px;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.publicNav .chooseTime ul{
+	width: 61%;
+	font-size: 12px;
+	color:#fff;
+	float: left;
+	border-right: 1px solid rgba(255,255,255,.4);
+}
+.publicNav .chooseTime ul.current{
+	width: 44%;
+}
+.publicNav .chooseTime ul.current li{
+	width: 16.666%;
+}
+.publicNav .chooseTime ul li{
+	float: left;
+	padding: 4px 0;
+    border: 1px solid rgba(255,255,255,.4);
+    border-right: 0;
+    cursor: pointer;
+    width: 11.11%;
+    text-align: center;
+}
+.publicNav .chooseTime ul li:hover{
+	background-color: #01B4EC;
+}
+.publicNav .chooseTime ul li.current{
+	background-color: #01B4EC;
+}
+.publicNav .chooseTime a{
+    display: block;
+    float: right;
+    background-color: #01B4EC;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 18px;
+    text-decoration: none;
+}

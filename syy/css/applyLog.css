@@ -1,0 +1,202 @@
+.applyLog{
+	width: 100%;
+	padding: 8px 1%;
+	max-width: 1920px;
+	min-width: 1120px;
+	padding-top: 15px;
+}
+.applyLog .logChart{
+	width: 100%;
+	height:auto;
+	margin-bottom: 5px;
+}
+.applyLog .logChart .chartLeft{
+	width: 55%;
+	height: auto;
+	float: left;
+	margin-right: 1%;
+}
+
+.applyLog .logChart .chartLeft .applyType{
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 3px 5%;
+	border-radius: 8px;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22); 
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.applyLog .logChart .chartLeft .applyType.cus{
+	padding:3px 2%;
+	margin-bottom: 0;
+}
+
+.applyLog .logChart .chartLeft .cus .applyChartLine{
+	width: 100%;
+	height: 324px;
+    margin: 10px 0;
+}
+
+.applyLog .logChart .chartLeft .applyType p{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.applyLog .logChart .chartLeft .applyType .applyChart{
+	width: 100%;
+	height: auto;
+}
+.applyLog .logChart .chartLeft .applyType .applyChart .applyChartPie{
+    width: 60%;
+    height: 325px;
+    float: left;
+    margin: 10px 0px;
+}
+.applyLog .logChart .chartLeft .applyType .applyChart .applyChartData{
+	width: 40%;
+	float: left;
+	height: 325px;
+	box-sizing: border-box;
+}
+
+
+.applyLog .logChart .chartLeft .applyType .applyChart .applyChartData  ul{
+	width: 200px;
+	height: 175px;
+	background-image: url(../images/bgborder.png) ;
+	background-repeat: no-repeat;
+	margin: 85px auto;
+	box-sizing: border-box;
+	padding: 37px 24px;
+}
+.applyLog .logChart .chartLeft .applyType .applyChart .applyChartData  ul li{
+	color:#fff;
+	font-size: 12px;
+	margin-bottom: 8px;
+}
+.applyLog .logChart .chartLeft .applyType .applyChart .applyChartData  ul i{
+	display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #02CCFB;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+}
+.applyLog .logChart .chartLeft .applyType .applyChart .applyChartData  ul span{
+	margin: 0 5px;
+}
+
+
+.applyLog .logChart .chartRight{
+	width: 44%;
+	height: 767px;
+	float: left;
+	border-radius: 8px;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22); 
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22)); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.applyLog .logChart .chartRight p{
+	text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.applyLog .logChart .chartRight .chartRightChart{
+    width: 90%;
+    margin: 36px auto;
+    margin-top: 20px;
+}
+.applyLog .logChart .chartRight .chartRightChart ul{
+    width: 100%;
+    color: #fff;
+    border-bottom: 1px solid #008FFB;
+    position: relative;
+    bottom: -17px;
+    padding: 3px 0;
+}
+.applyLog .logChart .chartRight .chartRightChart ul li.left{
+	float: left;
+	text-align: center;
+	width: 50%;
+}
+.applyLog .logChart .chartRight .chartRightChart ul li.left span{
+	margin-left: 5px;
+	color:#07ADD5;
+	font-size: 16px;
+}
+.applyLog .logChart .chartRight .chartRightChart ul li.right{
+	float: right;
+	text-align: center;
+	width: 50%;
+}
+.applyLog .logChart .chartRight .chartRightChart ul li.right span{
+	margin-left: 5px;
+	color:#169150;
+    font-size: 16px;
+}
+.applyLog .logChart .chartRight .chartRightChart .chartRightBar{
+	width: 100%;
+	height: 440px;
+}
+
+
+.applyLog .logChart .chartRight .chartRightTable{
+	width: 90%;
+	height: 197px;
+	margin:0px auto;
+	background:url(../images/bluebk.png) no-repeat;
+	background-size: 100% 100%;
+	color:#fff;
+	padding: 32px 0;
+    box-sizing: border-box;
+}
+.applyLog .logChart .chartRight .chartRightTable dl{
+	width: 46%;
+	margin: 0 1%;
+	float: left;
+	text-align: center;
+}
+.applyLog .logChart .chartRight .chartRightTable dl dt{
+	width: 33.3%;
+	float: left;
+	margin-bottom: 12px;
+}
+.applyLog .logChart .chartRight .chartRightTable dl dd{
+	width: 33.3%;
+	float: left;
+	margin-bottom: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,394 @@
+/*统一样式*/
+*{
+	font-family: "微软雅黑";
+}
+a:{
+	text-decoration: none;
+}
+
+.container{
+	width: 100%;
+	height:100%;
+	padding: 8px 1%;
+	min-width: 1120px;
+	max-width: 1920px;
+	clear:both;
+	font-size: 0;
+	-webkit-text-size-adjust:none;
+}
+.row{
+	margin-top:10px;
+}
+/*左边区域样式*/
+.left{
+	float:left; 
+	display:inline-block;
+	width:75%;
+	border:solid 1px #ffffff;
+	margin:0;
+	padding:0px;
+}
+
+/*中间区域样式*/
+.center{
+	float:left; 
+	/* display:inline-block; */
+	width:2%;
+	/* border:solid 1px #ffffff; */
+	padding-top:340px;
+}
+
+
+/* 右边区域样式 */
+.right{
+	/* float:right; */
+	display:inline-block;
+	width:23%;
+	/* border:solid 1px #ffffff; */
+	color:#ffffff;
+}
+
+.selectarea{
+	/*margin-bottom:20px;*/
+	height:40px;
+	font-size:14px;
+} 
+.selectarea > ul{
+	padding:0;
+	margin:0;
+}
+.selectarea > ul  > li{
+	list-style: none;
+    width: 50%;
+	height:40px;
+    float: left;
+	text-align:center;
+	padding-top: 10px;
+}
+
+.current{
+	background-color:#181c28;
+	clear:both;
+}
+
+.warningbar{
+	clear:both;
+	background-color:#181c28;
+	padding-top:20px;
+	padding-bottom: 40px;
+	font-size:12px;
+}
+.warningbar > div{
+	margin-top:20px;
+	height:40px;
+	width:100%;
+/* 	border:solid 1px red; */
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.line1,.line2{
+	height:20px;
+	width:100%;
+	font-size:12px;
+}
+
+.line1 >span{
+	width:40%;
+	height:20px;
+	float:left;
+}
+.line2 > div{
+	width:50%;
+	height:20px;
+	float:left;
+}
+
+.high{
+	background: -webkit-linear-gradient(left,#422833 ,#ae2833); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #422833 ,#ae2833); /* Opera 11.1 - 12.0 */  
+    background: -moz-linear-gradient(right, #422833 ,#ae2833); /* Firefox 3.6 - 15 */ 
+    background: linear-gradient(to right, #422833 ,#ae2833); /* 标准的语法 */ 
+}
+
+.middle{
+	background: -webkit-linear-gradient(left,#26283f ,#2562bb); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #26283f ,#2562bb); /* Opera 11.1 - 12.0 */  
+    background: -moz-linear-gradient(right, #26283f ,#2562bb); /* Firefox 3.6 - 15 */ 
+    background: linear-gradient(to right, #26283f ,#2562bb); /* 标准的语法 */ 
+}
+
+.low{
+	background: -webkit-linear-gradient(left,#252c34 ,#36a235); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #252c34 ,#36a235);  /* Opera 11.1 - 12.0 */  
+    background: -moz-linear-gradient(right, #252c34 ,#36a235);  /* Firefox 3.6 - 15 */ 
+    background: linear-gradient(to right, #252c34 ,#36a235);  /* 标准的语法 */ 
+}
+
+.normal{
+	background: -webkit-linear-gradient(left,#252934 ,#262835); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #252c34 ,#262835);  /* Opera 11.1 - 12.0 */  
+    background: -moz-linear-gradient(right, #252c34, #262835);  /* Firefox 3.6 - 15 */ 
+    background: linear-gradient(to right, #252c34 ,#262835);  /* 标准的语法 */ 
+}
+
+.loopholeinfo div{
+	width:100%;
+	/* border:solid 1px #ffffff; */
+}
+
+.loopholetitle{
+	height:40px;
+	text-align:center;
+	font-size:14px;
+	padding-top:8px;
+}
+
+.loopholelist > div{
+	height:70px;
+	width:100%;
+}
+
+.loopholelist > div > label{
+	height: 70px;
+    display: table-cell;
+    vertical-align: middle;
+	font-size: 12px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.deep{
+	background-color:#181c28;
+}
+
+/*漏洞的翻页样式*/
+.loopholepage{
+	height:70px;
+	text-align:center;
+	font-size:12px;
+	padding-top:26px;
+}
+
+.loopholepage a > img{
+	width:15px;
+	height:15px;
+}
+
+/*头部按钮样式*/
+.headicon{
+	font-size: 17px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.headicon:hover{
+	color: #FFFFFF;
+}
+
+/*查询区域背景*/
+.queryarea{
+	
+	/*背景渐变*/
+	background:linear-gradient(top, #252834, #141625);  
+	background:-moz-linear-gradient(top, #252834,#141625);  
+	background:-0-linear-gradient(top, #252834, #141625);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#252834), to(#141625));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252834', endColorstr='#141625',GradientType=0 );
+	background: -ms-linear-gradient(top, #252834, #141625); 
+
+	
+	border-radius: 8px;	
+	margin: 0px 2px 10px 2px;
+	padding: 30px 0;
+	height: auto;
+}
+
+/*输入框显示时间*/
+.dateicon{
+	background: url(../images/date.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.lineul{
+	height: 100%;
+	list-style: none;
+	margin-left: -25px;
+}
+.lineul > li {
+	width: 20%;
+	margin: 0 20px;
+	float: left;	
+	white-space: nowrap;
+}
+.lineul > li > span{
+	margin-right: 10px;
+	width: 10%;
+	color:#FFFFFF;
+	font-size: 12px;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	display: inline;
+	
+}
+
+.lineul > li > input{
+	/*width: 205px;*/
+	width: 75%;
+	height: 25px;
+	background-color: #262835;
+	border-radius: 4px;
+	border: 0;
+	color: #FFFFFF;
+	text-indent: 1em;	
+	font-size:12px;
+	/*margin: 0 8px;*/
+}
+
+/*查询按钮*/
+/*.querybtn{
+	width: 120px;
+	color: #FFFFFF;
+	font-size: 12px;
+	background-color: #01b4ec;
+    padding: 6px 0;    
+    white-space: nowrap;    
+    cursor: pointer;    
+    border: 1px solid transparent;
+    border-radius: 4px;   
+    text-align: center;
+}*/
+.querybtnarea{
+	width: 65px;
+	height: 25px;
+	color: #FFFFFF;
+	background-color: #01b4ec;
+	font-size: 12px;
+	margin-right: 40px;
+	padding: 2px 0;
+	/*margin-top: -50px;*/
+	float: right;
+	white-space: nowrap;
+	cursor: pointer;    
+    border: 1px solid transparent;
+    border-radius: 4px;   
+    text-align: center;
+	
+}
+/*向下箭头*/
+.downarrow{
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 22px;
+	/*position: absolute;*/
+	height: 36px;
+	width: 36px;
+	/*background: url(../images/expand.png);*/
+}
+.downarrow:hover{	
+	color: #FFFFFF;	
+}
+.pagedown{
+	color: #FFFFFF;	
+	background-color: #262835;	
+}
+
+
+/*分页按钮样式*/
+.page{
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	padding: 2px 10px;
+	margin: 0 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.page:hover{
+	color: #FFFFFF;
+}
+.pagecontent{
+	color: #FFFFFF;
+	margin-top: 35px;
+}
+/*分页下拉按钮*/
+.pagedown{
+	border: 1px solid #898a8f;
+	border-radius: 3px;
+	margin-left: 0 1px;
+	padding: 2px;
+	/*background-image: url(../images/pagedown.png);*/
+	/*background-repeat: no-repeat;*/
+}
+.pagedown:hover{
+	cursor: pointer;
+}
+
+/*分页下拉内容*/
+.pagedownlist{
+	background-color:#252834;
+	list-style: none;
+	position: absolute;
+	text-align: center;
+    width: 34px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid #F5F5F5;
+    padding: 5px 5px;     
+    color: #FFFFFF;
+    margin-left: 48px;
+    margin-top: 2px;   
+    display: none;
+}
+.pagedownlist > li:hover{
+	cursor: pointer;
+}
+
+
+/*图表区域*/
+.chartarea{
+	height: 300px;	
+}
+
+/*表格区域*/
+.tablearea{
+	/*背景渐变*/
+	background:linear-gradient(top, #252834, #141625);  
+	background:-moz-linear-gradient(top, #252834,#141625);  
+	background:-0-linear-gradient(top, #252834, #141625);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#252834), to(#141625));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252834', endColorstr='#141625',GradientType=0 );
+	background: -ms-linear-gradient(top, #252834, #141625); 
+	
+	border-radius: 8px;	
+	margin: 15px 2px;
+	padding: 25px 0;
+	height: auto;
+}
+.tabletitle{
+	border-top: 0;
+	font-weight: 600;	
+}
+.tabletitle > th{	
+	text-align: center;
+}
+.table{
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+}
+ .table > tbody > tr > td{ 	
+ 	border-top: 1px solid #898a8f;
+	padding:12px;
+ }
+ 
+ .table > tbody > tr:hover{
+	 background-color: rgba(1,180,236,0.4);
+ }
+
+@media screen and (max-width: 767px){
+	.table-responsive {
+		border: 0;
+	}	
+}

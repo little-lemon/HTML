@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>终端日志</title>
+<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="./css/terminallog.css" />
+<script src="./js/jquery-1.11.1.js"></script>
+<script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="./js/terminallog.js"></script>
+<script type="text/javascript" src="./jedate/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./jedate/jquery.jedate.js"></script>
+<link type="text/css" rel="stylesheet" href="./jedate/skin/jedate.css">
+
+</head>
+<body>
+	<div>
+		<div class="raw" >
+		<label class="glyphicon glyphicon-th-list">&nbsp;终端日志</label>
+		</div>
+		<form id="auditsearch-form" name="auditsearch-form"  method="POST" autocomplete="off" action="">
+		<div class="row search-background" id="search-div" >
+			<!--第一行-->
+			<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="col-lg-5 col-md-5 col-sm-5" >
+				<div class="colcol-lg-6 col-md-6 col-sm-6">
+					<div>
+						<label class="w60">开始时间</label> 
+						<input class="workinput wicon" id="search_fromtime" type="text" name="search_fromtime" />
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div >
+						<label class="w60">应用名称</label>
+						<input type="text"  name="search_appname" id="search_appname" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-5">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div>
+						<label class="w60" >用户名</label>
+						<input type="text" id="search_username" name="search_username" />
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div>
+						<label class="w60">URL</label>
+						<input type="text"  name="search_url" id="search_url" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 ">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<button type="button" class="btn btn-info btn-xs querybtn"  id="search_query">查询</button>
+				</div>
+			</div>
+			</div>
+			<!-- /第一行 -->
+			<div class="up-down">
+			<!-- /第二行 -->
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div>
+						<label class="w60">用户IP</label>
+						<input type="text"  name="search_userip" id="search_userip" />
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div>
+						<label class="w60">源IP</label>
+						<input type="text" name="search_srcip" id="search_srcip" />
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5 ">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div>
+						<label class="w60">目标IP</label>
+						<input type="text" name="search_destip" id="search_destip"  />
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div>
+						<label class="w60">源端口</label>
+						<input type="text" name="search_srcport" id="search_srcport" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /第二行 -->
+			<!-- 第三行 -->
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="col-lg-5 col-md-5 col-sm-5 ">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<label class="w60">目标端口</label>
+						<input type="text" name="search_destport" id="search_destport" />
+					</div>
+				</div>		
+			</div>
+			<div>
+			</div>
+			<!-- /第三行 -->
+			</div>
+			<div class="raw up">
+				<label class="glyphicon glyphicon-menu-up"></label>
+			</div>
+		</div>
+		</form>
+		<div class="tbw">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="right"  style="padding-left:30px;">序号</th>
+						<th>应用名称</th>
+						<th>发生时间</th>
+						<th>用户</th>
+						<th>用户IP</th>
+						<th>源IP</th>
+						<th>目标IP</th>
+						<th>发送流量（M）</th>
+						<th>接收流量（M）</th>
+						<th>源端口</th>
+						<th>目的端口</th>
+						<th style="padding-right:30px;">URL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="right">1</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td class="tdlast" style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">2</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">3</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">4</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">5</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">6</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">7</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">8</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">9</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+					<tr>
+						<td class="right">10</td>
+						<td>爱奇艺</td>
+						<td>2017-02-06 20:18:18</td>
+						<td>linqs</td>
+						<td>200.200.176.64</td>
+						<td>200.200.176.64</td>
+						<td>10.10.200.64</td>
+						<td>3874.5M</td>
+						<td>3874.5M</td>
+						<td>80</td>
+						<td>80</td>
+						<td style="padding-right:30px;">https://10.5.6.181/main.html</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-lg-6 left">
+					每页显示&nbsp;
+					<select class="bcolor">
+						<option>13</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+					</select>&nbsp;条&nbsp;|&nbsp;共40条
+				</div>
+				<div class="col-lg-6 right">
+					第<label class="page">1</label>
+					<label class="glyphicon glyphicon-collapse-down dropdown"></label>
+					<ul class="dropdown-content">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+					</ul>页&nbsp;|&nbsp;共3页&nbsp; <label class="border pre">上一页</label>&nbsp;&nbsp;<label class="border next">下一页</label>
+				</div> 
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

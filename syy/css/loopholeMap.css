@@ -1,0 +1,242 @@
+.applyLog{
+	width: 100%;
+	padding: 8px 1%;
+	max-width: 1920px;
+	min-width: 1120px;
+	padding-top: 10px;
+}
+.applyLog .chooseTime ul{
+	width: 40%;
+}
+.applyLog .chooseTime ul li{
+	width: 16.65%;
+}
+.applyLog .loopholeMap{
+	width: 100%;
+	height: auto;
+	margin-top: 8px;
+}
+.applyLog .loopholeMap .loopholeMapLeft{
+	width: 70%;
+	height: auto;
+	float: left;
+	margin-right: 8px;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation{
+	width: 100%;
+	height:400px;
+}
+
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .mapSituation{
+	width: 75%;
+	height: 100%;
+	margin-right: 10px;
+	border-radius: 8px;
+	float: left;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .mapSituation .mapSituationTitle{
+	width: 94%;
+	height:6%;
+	background:url(../images/mapbg.png) no-repeat;
+	background-size: 100%;
+	margin:8px auto;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 1px;
+    line-height: 2.5;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .mapSituation .mapSituationWorld{
+	width: 100%;
+	height: 90%;
+}
+
+
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation{
+	width: 23.7%;
+	height: 100%;
+	float: left;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li{
+	width: 100%;
+	height: 49%;
+	margin-bottom: 8px;
+	border-radius: 8px;
+	border-top: 1px solid #21232F;
+	position: relative;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li p.title{
+	color:#fff;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 12px;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li .outbreak{
+	width: 100%;
+	height: 77%;
+	margin-top: 5px;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li .level{
+	position: absolute;
+	font-size: 18px;
+	color:#fff;
+	bottom:17px;
+	left:42%;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin{
+	margin:0;
+	box-sizing: border-box;
+	padding: 25px 10px;
+
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin .tableHide{
+	width: 100%;
+	height: 84%;
+	overflow: hidden;
+	position: relative;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table{
+	width: 100%;
+	height:auto;
+	color:#fff;
+}
+
+
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table thead th{
+	width: 50%;
+	text-align: center;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table thead th.cus{
+	width: 25%;
+}
+
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table tbody {
+	position: absolute;
+	width: 100%;
+	top:0;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table tbody tr{
+	width: 100%;
+	display: table;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table tbody td{
+	text-align: center;
+	width: 50%;
+	/*white-space : nowrap ;*/
+	padding: 3px 0;
+}
+.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation .outbreakSituation li.nomargin table tbody td.cus{
+	width: 25%;
+}
+
+.applyLog .loopholeMap .loopholeMapLeft  .loopholeMapLine{
+	width: 100%;
+	height: 300px;
+	margin-top: 8px;
+	border-radius: 8px;
+	position: relative;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.applyLog .loopholeMap .loopholeMapLeft  .loopholeMapLine .databutton{
+    width: 40px;
+    height: 17px;
+    position: absolute;
+    right: 5%;
+    top: 7%;
+}
+.applyLog .loopholeMap .loopholeMapLeft  .loopholeMapLine .databutton img{
+	float: left;
+	cursor: pointer;
+}
+
+.applyLog .loopholeMap .loopholeMapLeft  .loopholeMapLine p{
+	color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 12px;
+}
+.applyLog .loopholeMap .loopholeMapLeft  .loopholeMapLine  .loopMapLine{
+	width: 100%;
+	height: 100%;
+}
+.applyLog .loopholeMap .loopholeMapRight{
+	width: 29.2%;
+	height:auto;
+	float: left;
+}
+.applyLog .loopholeMap .loopholeMapRight .mapRightType{
+	width: 100%;
+	height: 350px;
+	margin-bottom: 8px;
+	border-radius: 8px;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.applyLog .loopholeMap .loopholeMapRight .mapRightType .highRisk{
+	width: 100%;
+	height: 100%;
+}
+
+.applyLog .loopholeMap .loopholeMapRight .mapRightType.nomargin{
+	margin:0;
+}
+
+.applyLog .loopholeMap .loopholeMapRight .mapRightType.nomargin .mapRightPie{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+@media screen and  (max-width:1200px){
+	.applyLog .loopholeMap .loopholeMapLeft .loopholeMapSituation{
+		width: 100%;
+		height:365px;
+	}
+	.applyLog .loopholeMap .loopholeMapRight .mapRightType{
+		height: 332px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

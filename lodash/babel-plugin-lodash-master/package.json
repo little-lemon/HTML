@@ -1,0 +1,53 @@
+{
+  "name": "babel-plugin-lodash",
+  "version": "3.2.12-pre",
+  "description": "Modular Lodash builds without the hassle.",
+  "keywords": "babel-plugin, cherry-pick, lodash, modules",
+  "repository": "lodash/babel-plugin-lodash",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": "Graeme Yeates <megawac@gmail.com> (https://github.com/megawac)",
+  "contributors": [
+    "Graeme Yeates <megawac@gmail.com> (https://github.com/megawac)",
+    "John-David Dalton <john.david.dalton@gmail.com> (http://allyoucanleet.com/)"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib || true",
+    "prepublish": "npm run build",
+    "test": "mocha --check-leaks --compilers js:babel-register"
+  },
+  "devDependencies": {
+    "async": "^2.4.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-add-module-exports": "~0.2.1",
+    "babel-plugin-lodash": "3.2.11",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^4.0.2",
+    "lodash-bound": "^1.1.2",
+    "lodash-compat": "^3.10.2",
+    "lodash-es": "^4.17.4",
+    "mocha": "^3.4.2",
+    "ramda": "^0.24.1",
+    "react-bootstrap": "^0.31.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.1",
+    "lodash": "^4.17.4"
+  },
+  "files": [
+    "lib"
+  ],
+  "greenkeeper": {
+    "ignore": [
+      "babel-plugin-lodash"
+    ]
+  }
+}

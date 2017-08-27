@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: 21232f;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+}
+
+.clear{
+	clear: both;
+}
+
+div{
+	padding: 0;
+	margin: 0;
+}
+.container{
+	width: 100%;
+	padding: 10px;
+	margin: 0;
+}
+/*标题栏样式*/
+.title{
+	height:50px;
+    padding-top: 10px;
+    font-size:18px;
+}
+.title > img{
+	width:30px;
+	height:30px;
+	border:1px solid #000000;
+}
+
+.title > span{
+	border:1px solid #000000;
+    height: 30px;
+    display: inline-block;
+}
+
+.queryarea{
+    background: -moz-linear-gradient(top,  #181c28 0%, #0d0e22 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#181c28), color-stop(100%,#0d0e22));
+    background: -webkit-linear-gradient(top,  #181c28 0%,#0d0e22 100%);
+    background: -o-linear-gradient(top,  #181c28 0%,#0d0e22 100%);
+    background: -ms-linear-gradient(top,  #181c28 0%,#0d0e22 100%);
+    background: linear-gradient(to bottom,  #181c28 0%,#0d0e22 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181c28', endColorstr='#0d0e22',GradientType=0 );
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr=#181c28, endColorStr=#0d0e22); /*IE 6 7 8*/
+    height: 70px;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.select{
+	padding-left: 10px;
+}
+.select > ul{
+	padding: 0;
+	margin: 0;
+	letter-spacing: -4px;
+}
+.select > ul > li{
+	border:solid 1px #FFFFFF; 
+	list-style:none; /* 将默认的列表符号去掉 */
+	padding:3px 20px 3px 20px; /* 将默认的内边距去掉 */
+	margin:0; /* 将默认的外边距去掉 */
+	display:inline-block;
+	letter-spacing: normal;
+}
+
+.select > ul > li:hover{
+	background-color: #178ebc;
+}
+
+.querybtn {
+	padding-right: 10px;
+}
+.querybtn > button{
+	border: solid 1px #FFFFFF;
+    border-radius: 4px;
+    background-color: #01b4ec;
+    padding: 4px 10px 4px 10px;
+    font-size: 14px;
+}
+
+.querybtn > button:hover{
+    background-color: #178ebc;
+}
+
+.content{
+	border: solid 1px red;
+	overflow: hidden;
+}
+
+.loophole-left{
+	border:solid 1px #ffffff;
+	float:left;
+	width:70%;
+	overflow: hidden;
+}
+
+.loophole-left .up{
+	border:solid 1px blue;
+	height: 430px;
+}
+
+.loophole-left .up .loophole-map{
+	background: -moz-linear-gradient(top,  #181c28 0%, #0d0e22 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#181c28), color-stop(100%,#0d0e22));
+    background: -webkit-linear-gradient(top,  #181c28 0%,#0d0e22 100%);
+    background: -o-linear-gradient(top,  #181c28 0%,#0d0e22 100%);
+    background: -ms-linear-gradient(top,  #181c28 0%,#0d0e22 100%);
+    background: linear-gradient(to bottom,  #181c28 0%,#0d0e22 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181c28', endColorstr='#0d0e22',GradientType=0 );
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr=#181c28, endColorStr=#0d0e22); /*IE 6 7 8*/
+	border:solid 1px blue;
+	width:75%;
+	height:100%;
+	float:left;
+}
+
+.loophole-left .up .loophole-map .loophole-map-title{
+	height:8%;
+	margin-top:8px;
+	/*background-image: url(../images/mapbg.png);*/
+    background: url(../images/mapbg.png) no-repeat;
+    background-size: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2.5;
+    letter-spacing: 1px;
+}
+
+.loophole-left .up .loophole-map .map-situation-world{
+	border: dotted 1px green;
+	width: 100%;
+	height: 90%;
+}
+
+.loophole-left .up > ul{
+	border:solid 1px green;
+	width:25%;
+	float:left;
+}
+
+.loophole-left .up > ul > li{
+	height: 50%;
+	list-style: none;
+	border: dotted 2px red;
+}
+
+.loophole-statistics{
+	border:solid 1px yellow;
+	height: 300px;
+}
+
+.loophole-right{
+	border:solid 1px #ffffff;
+	float:left;
+	width:30%;
+	height:730px;
+}

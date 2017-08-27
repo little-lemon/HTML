@@ -1,0 +1,134 @@
+<!DOCTYPE>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>应用日志</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"  />
+	<link rel="stylesheet" type="text/css" href="css/applog.css" />
+	
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<!--<script src="js/echarts.js"></script>-->
+	<script src="js/echarts.min.js "></script> 
+	<!--<script type="text/javascript" src="js/applog.js"></script>-->
+	<script type="text/javascript" src="js/applog2.js"></script>
+	<body>
+		<div class="container">
+			<div class="title"><img src="images/icon.png"><span>应用日志</span></div>
+			<div class="queryarea">
+				<div class="select">
+					<ul>
+						<li>30分钟</li><li>1小时</li><li>2小时</li>
+						<li>8小时</li>
+						<li>12小时</li>
+						<li>1天</li>
+						<li>7天</li>
+						<li>1个月</li>
+						<li>3个月</li>
+					</ul>
+				</div>
+				<div class="querybtn">
+					<button>明细查询</button>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content-left">
+					<div class="chart-one">
+						<div class="charttitle"><span>应用类型流量占比<span></div>
+						<div class="chart">
+							<div class="piechart">
+								<div id="piechart" style="height:280px;border: 1px dashed blueviolet;"></div>
+							</div>
+							<div class="charnotes">
+								<div>
+									<span><img src="images/dian.png" />总流量值 778558.55M</span>
+									<span><img src="images/dian.png" />发送流量 778558.55M</span>
+									<span><img src="images/dian.png" />接收流量 778558.55M</span>
+									<span><img src="images/dian.png" />应用总数  768个</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="chart-tow">
+						<div class="charttitle"><span>应用类型流量占比<span></div>
+						<div class="linechart">
+							<div id="linechart" style="height:340px;border: 1px dashed white;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content-right">
+					<div class="chart-three">
+						<div class="charttitle"><span>XX类型应用发送与接收流量排行<span></div>
+						<div class="trafficranking">
+							<div class="rankingmap">
+								<div>
+									<div class="head" style="background-color: pink;">
+										<!--<dd ></dd>
+										<dd ></dd>
+										<dd ></dd>-->
+										<span class="mapleft">发送流量 769465.5M</span>
+										<span class="mapcenter"></span>
+										<span class="mapright">接收流量769465.5M</span>
+									</div>
+									<dl>
+										<dd class="mapleft"><span style="width: 90%;">123</span></dd>
+										<dd class="mapcenter">爱奇艺</dd>
+										<dd class="mapright"><span style="width: 90%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 80%;">left</span></dd>
+										<dd class="mapcenter">优酷视频</dd>
+										<dd class="mapright"><span style="width: 70%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 70%;">left</span></dd>
+										<dd class="mapcenter">搜狐视频</dd>
+										<dd class="mapright"><span style="width: 50%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 60%;">left</span></dd>
+										<dd class="mapcenter">QQ视频</dd>
+										<dd class="mapright"><span style="width: 60%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 80%;">left</span></dd>
+										<dd class="mapcenter">迅雷影音</dd>
+										<dd class="mapright"><span style="width: 70%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 50%;">left</span></dd>
+										<dd class="mapcenter">QQ影音</dd>
+										<dd class="mapright"><span style="width: 90%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 70%;">left</span></dd>
+										<dd class="mapcenter">人人影视</dd>
+										<dd class="mapright"><span style="width: 70%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 60%;">left</span></dd>
+										<dd class="mapcenter">人人美剧</dd>
+										<dd class="mapright"><span style="width: 60%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 90%;">left</span></dd>
+										<dd class="mapcenter">bilinili</dd>
+										<dd class="mapright"><span style="width: 90%;">right</span></dd>
+									</dl>
+									<dl>
+										<dd class="mapleft"><span style="width: 60%;">left</span></dd>
+										<dd class="mapcenter">ACfun</dd>
+										<dd class="mapright"><span style="width: 60%;">right</span></dd>
+									</dl>
+								</div>
+							</div>
+							<div class="rankinginfo">down</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

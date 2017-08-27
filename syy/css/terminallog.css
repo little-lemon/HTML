@@ -1,0 +1,118 @@
+.container{
+	width: 100%;
+	padding: 8px 1%;
+	min-width: 1120px;
+	max-width: 1920px;
+	padding-top: 0;
+}
+/*头部按钮样式*/
+.headicon{
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.headicon span{
+	position: relative;
+	top:2px;
+}
+.headicon:hover{
+	color: #FFFFFF;
+}
+
+
+
+.querybtnarea{
+	width: 65px;
+	height: 25px;
+	color: #FFFFFF;
+	background-color: #01b4ec;
+	font-size: 12px;
+	margin-right: 10px;
+	padding: 2px 0;
+	/*margin-top: -50px;*/
+	float: right;
+	white-space: nowrap;
+	cursor: pointer;    
+    border: 1px solid transparent;
+    border-radius: 4px;   
+    text-align: center;
+	
+}
+/*向下箭头*/
+.downarrow{
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 22px;
+	display:block;
+	margin:0 auto;
+	/*position: absolute;*/
+	/*background: url(../images/expand.png);*/
+}
+.downarrow:hover{	
+	color: #FFFFFF;	
+}
+.pagedown{
+	color: #FFFFFF;	
+	background-color: #262835;	
+}
+
+
+/*分页按钮样式*/
+.page{
+	border: 1px solid #898a8f;
+	padding: 2px 10px;
+	margin: 0 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.page:hover{
+	color: #FFFFFF;
+}
+.pagecontent{
+	color: #FFFFFF;
+	margin-top: 25px;
+}
+/*分页下拉按钮*/
+.pagedown{
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 3px;
+	margin-left: 0 1px;
+	padding: 2px;
+	/*background-image: url(../images/pagedown.png);*/
+	/*background-repeat: no-repeat;*/
+}
+.pagedown:hover{
+	cursor: pointer;
+}
+
+/*分页下拉内容*/
+.pagedownlist{
+	background-color:#171B27;
+	list-style: none;
+	position: absolute;
+	text-align: center;
+    width: 34px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid #F5F5F5;
+    padding: 5px 5px;     
+    color: #FFFFFF;
+    margin-left: 48px;
+    margin-top: 2px;   
+    display: none;
+}
+.pagedownlist > li:hover{
+	cursor: pointer;
+}
+
+
+
+ 
+.trhover:hover{ 	
+ 	background-color: #0c5575;
+ }
+
+
+@media screen and (max-width: 767px){
+	.table-responsive {
+		border: 0;
+	}	
+}

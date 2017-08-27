@@ -1,0 +1,99 @@
+/* <meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"> */
+
+/* <!--[if lte IE 8]>
+<p class="browserupgrade">您的浏览器版本老的可笑, 请到 <a href="http://browsehappy.com/">这里</a> 更新, 以获取最佳的体验</p>
+<![endif]--> */
+.browserupgrade {
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+/************
+ * 页面样式
+ ************/
+
+/* ==========
+   基本默认值
+   ========== */
+   
+html {
+    font-size: 62.5%;
+    color: #222;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* ==========
+   工具样式
+   ========== */
+   
+/**清除浮动**/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**通过样式添加标签的内容**/
+a:first-child:before{
+	content:'最新公告：\00a0\00a0';  
+	color:#aaa;
+}
+
+/**文本截断**/
+a:first-child:before{
+	text-overflow:ellipsis;  /* 用省略号来截断文字 */
+	overflow:hidden;         /* 溢出隐藏 */
+	white-space:nowrap;      /* 文字不换行 */
+}
+
+/* css3宽度计算方法 */
+.item{
+	display:inline-block;
+	display: inline-block;
+    width: calc(33.33333% - 3rem);
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc
+}
+
+
+/* ===============
+   媒体查询样式
+   =============== */
+@media only screen and (max-width:800px){
+	
+}
+
+@media only screen and (min-width:481px) and (max-width:800px){
+	
+}
+
+@media only screen and (max-width:480px){
+	
+}
+   
+   
+
+
+

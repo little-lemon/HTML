@@ -1,0 +1,44 @@
+/*图表区域*/
+.chartarea{
+	height: 300px;	
+}
+
+/*表格区域*/
+.tablearea{
+	/*背景渐变*/
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27,#0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#171B27), to(#0D0E22));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+	background: -ms-linear-gradient(top, #171B27, #0D0E22); 
+	
+	border-radius: 8px;	
+	margin: 15px 2px 0;
+	padding: 0px 0 15px;
+	height: auto;
+}
+.tabletitle{
+	border-top: 0;
+	font-weight: 600;	
+}
+
+.tabletitle > th{	
+	text-align: center;
+	padding: 18px 0 !important;
+	border:0 !important;
+}
+.table{
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+}
+ .table > tbody > tr > td{ 	
+ 	border-top: 1px solid rgba(255,255,255,.1);
+ 	padding:13px 0;
+ }
+.table-hover > tbody > tr:hover {
+  background-color: rgba(1,180,236,0.4);
+  border: 0;  
+}

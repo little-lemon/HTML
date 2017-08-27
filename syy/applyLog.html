@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>应用日志</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/applyLog.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+</head>
+<body>
+	
+	<div class="publicTitle clearfix">
+		<div class="logTitle">
+			<img src="images/icon.png" alt="">
+			<span>应用日志</span>
+		</div>
+	</div>
+
+	<div class="publicNav">
+		<div class="chooseTime clearfix">
+			<ul class="clearfix">
+				<li>30分钟</li>
+				<li>1小时</li>
+				<li>2小时</li>
+				<li>8小时</li>
+				<li>12小时</li>
+				<li class="current">1天</li>
+				<li>7天</li>
+				<li>1个月</li>
+				<li>3个月</li>
+			</ul>
+			<a href="applyTable.html" title="">明细查询</a>
+		</div>
+	</div>
+	
+	<div class="applyLog" style="border: solid 1px white;">
+		<div class="logChart clearfix" style="border: solid 1px white;">
+			<div class="chartLeft">
+				<div class="applyType">
+					<p>应用类型流量占比</p>
+					<div class="applyChart clearfix">
+						<div class="applyChartPie" id="applyChartPie"></div>
+						<div class="applyChartData">
+								<ul>
+									<li>
+										<i></i>
+										<span>总流量值</span>
+										778558.55M
+									</li>
+									<li>
+										<i></i>
+										<span>发送流量</span>
+										778558.55M
+									</li>
+									<li>
+										<i></i>
+										<span>接收流量</span>
+										778558.55M
+									</li>
+									<li>
+										<i></i>
+										<span>应用总数</span>
+										678个
+									</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="applyType cus">
+					<p>应用类型流量占比</p>
+					<div class="applyChartLine" id="applyChartLine"></div>
+				</div>
+			</div>
+			<div class="chartRight">
+				<p>XX类型应用发送与接收流量排行</p>
+				<div class="chartRightChart">
+					<ul class="clearfix">
+						<li class="left">发送流量<span>76946.5M</span></li>
+						<li class="right">接收流量<span>75664.5M</span></li>
+					</ul>
+					<div class="chartRightBar" id="chartRightBar"></div>
+				</div>
+				<div class="chartRightTable clearfix">
+					<dl class="clearfix">
+						<dt>排名</dt>
+						<dt>应用名称</dt>
+						<dt>总流量值</dt>
+						<dd>1</dd>
+						<dd>爱奇艺</dd>
+						<dd>102458M</dd>
+						<dd>2</dd>
+						<dd>优酷视频</dd>
+						<dd>87495M</dd>
+						<dd>3</dd>
+						<dd>搜狐视频</dd>
+						<dd>67895M</dd>
+						<dd>4</dd>
+						<dd>QQ视频</dd>
+						<dd>54365M</dd>
+						<dd>5</dd>
+						<dd>迅雷影音</dd>
+						<dd>46987M</dd>
+					</dl>
+					<dl class="clearfix">
+						<dt>排名</dt>
+						<dt>应用名称</dt>
+						<dt>总流量值</dt>
+						<dd>6</dd>
+						<dd>爱奇艺</dd>
+						<dd>102458M</dd>
+						<dd>7</dd>
+						<dd>优酷视频</dd>
+						<dd>87495M</dd>
+						<dd>8</dd>
+						<dd>搜狐视频</dd>
+						<dd>67895M</dd>
+						<dd>9</dd>
+						<dd>QQ视频</dd>
+						<dd>54365M</dd>
+						<dd>10</dd>
+						<dd>迅雷影音</dd>
+						<dd>46987M</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+<script type="text/javascript" src="js/applyLog.js"></script>
+</html>

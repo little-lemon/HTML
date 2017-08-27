@@ -1,0 +1,165 @@
+* {margin:0;padding:0}
+
+body{
+	background-color:#252834;
+	color:#aaaaaa;
+	padding:25px;
+	font-weight: 500;
+	min-width:1120px;
+	max-width:1920px;
+}
+
+.none{
+	display:none
+}
+.query ul li{  
+            text-decoration: none;//去掉li前面的圆点  
+            list-style: none;  
+            display: inline;//让li横向排列  
+            border: 1px solid #FFFFFF;  
+        }  
+
+.w60{
+	 width:60px; 
+}
+
+.line28{
+	height:28px;
+}
+
+.up{
+	text-align:center;
+}
+
+.right{
+	/*float:right;*/
+	text-align:right;
+}
+
+.left{
+	/*float:left;*/
+	text-align:left;
+}
+
+.border{
+	border:1px solid #dddeee;
+}
+
+.search-background{
+	/*background-color:#141625;
+	margin:0;
+	padding:16px 32px;*/
+	background:linear-gradient(top, #181c28, #0d0e22);  
+	background:-moz-linear-gradient(top, #181c28,#0d0e22);  
+	background:-0-linear-gradient(top, #181c28, #0d0e22);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#181c28), to(#0d0e22));
+	
+	border-radius: 8px;	
+	margin: 10px 0 10px 0;
+	padding: 30px 0 0 0;
+	height: auto;
+}
+
+
+
+.table-hover > tbody > tr:hover > td {
+  background-color: #178ecb;
+}
+
+.table{
+	 /* background-color: #1a273a; */
+	 background:linear-gradient(top, #181c28, #0d0e22);  
+	background:-moz-linear-gradient(top, #181c28,#0d0e22);  
+	background:-0-linear-gradient(top, #181c28, #0d0e22);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#181c28), to(#0d0e22));
+}
+
+.bcolor{
+	background-color:#262835;
+	outline:none;
+}
+
+input{
+	background-color:#262835;
+	outline:none;
+	border:none;
+}
+
+/*input:focus {
+	outline:none;
+    border:solid 2px #5d6067;
+}
+
+input:hover{
+	outline:none;
+    border:solid 1px #5d6067;
+} */
+
+input{
+	border-radius:5px;
+}
+input:focus{
+	outline:#5d6067 solid 1px;
+	border-radius:5px;
+}
+
+table{
+	border-bottom:solid 1px #ffffff;
+	text-align:center;
+}
+
+.tbw{
+	min-width:1120px;
+	max-width:1920px;
+}
+
+table thead tr th{
+	text-align:center;
+}
+
+
+table thead tr .right{
+	text-align:right;
+}
+
+table tbody tr td .right{
+	text-align:right;
+}
+
+button:hover{
+	background-color:#178ecb;
+}
+
+.querybtn{
+	padding-left:20px;
+	padding-right:20px;
+}
+.pre:hover,.next:hover{
+	background-color:#178ecb;
+}
+
+ul li{
+	list-style-type:none;
+}
+
+ul li:hover{
+	background-color:#178ecb;
+	cursor:pointer;
+}
+
+ .dropdown {
+  position: relative;
+  display: inline-block;
+} 
+.dropdown-content {  
+    display: none;
+    position: absolute;
+    background-color:#252834;
+    width: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px 5px;
+    right: 170px;
+}
+/* .dropdown:hover .dropdown-content {
+	display: block;
+} */

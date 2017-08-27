@@ -1,0 +1,236 @@
+/*统一样式*/
+*{
+	font-family: "微软雅黑";
+}
+a:{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+	padding: 8px 1%;
+	min-width: 1120px;
+	max-width: 1920px;
+}
+.row{
+	margin-top:10px;
+}
+/*头部按钮样式*/
+.headicon{
+	font-size: 17px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.headicon:hover{
+	color: #FFFFFF;
+}
+
+/*查询区域背景*/
+.queryarea{
+	
+	/*背景渐变*/
+	background:linear-gradient(top, #252834, #141625);  
+	background:-moz-linear-gradient(top, #252834,#141625);  
+	background:-0-linear-gradient(top, #252834, #141625);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#252834), to(#141625));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252834', endColorstr='#141625',GradientType=0 );
+	background: -ms-linear-gradient(top, #252834, #141625); 
+
+	
+	border-radius: 8px;	
+	margin: 10px 2px;
+	padding: 30px 0;
+	height: auto;
+}
+
+/*输入框显示时间*/
+.dateicon{
+	background: url(../images/date.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.lineul{
+	height: 100%;
+	list-style: none;
+	margin-left: -25px;
+}
+.lineul > li {
+	width: 20%;
+	margin: 0 20px;
+	float: left;	
+	white-space: nowrap;
+}
+.lineul > li > span{
+	margin-right: 10px;
+	width: 10%;
+	color:#FFFFFF;
+	font-size: 12px;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	display: inline;
+	
+}
+
+.lineul > li > input{
+	/*width: 205px;*/
+	width: 75%;
+	height: 25px;
+	background-color: #262835;
+	border-radius: 4px;
+	border: 0;
+	color: #FFFFFF;
+	text-indent: 1em;	
+	font-size:12px;
+	/*margin: 0 8px;*/
+}
+
+/*查询按钮*/
+/*.querybtn{
+	width: 120px;
+	color: #FFFFFF;
+	font-size: 12px;
+	background-color: #01b4ec;
+    padding: 6px 0;    
+    white-space: nowrap;    
+    cursor: pointer;    
+    border: 1px solid transparent;
+    border-radius: 4px;   
+    text-align: center;
+}*/
+.querybtnarea{
+	width: 65px;
+	height: 25px;
+	color: #FFFFFF;
+	background-color: #01b4ec;
+	font-size: 12px;
+	margin-right: 40px;
+	padding: 2px 0;
+	/*margin-top: -50px;*/
+	float: right;
+	white-space: nowrap;
+	cursor: pointer;    
+    border: 1px solid transparent;
+    border-radius: 4px;   
+    text-align: center;
+	
+}
+/*向下箭头*/
+.downarrow{
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 22px;
+	/*position: absolute;*/
+	height: 36px;
+	width: 36px;
+	/*background: url(../images/expand.png);*/
+}
+.downarrow:hover{	
+	color: #FFFFFF;	
+}
+.pagedown{
+	color: #FFFFFF;	
+	background-color: #262835;	
+}
+
+
+/*分页按钮样式*/
+.page{
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	padding: 2px 10px;
+	margin: 0 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.page:hover{
+	color: #FFFFFF;
+}
+.pagecontent{
+	color: #FFFFFF;
+	margin-top: 35px;
+}
+/*分页下拉按钮*/
+.pagedown{
+	border: 1px solid #898a8f;
+	border-radius: 3px;
+	margin-left: 0 1px;
+	padding: 2px;
+	/*background-image: url(../images/pagedown.png);*/
+	/*background-repeat: no-repeat;*/
+}
+.pagedown:hover{
+	cursor: pointer;
+}
+
+/*分页下拉内容*/
+.pagedownlist{
+	background-color:#252834;
+	list-style: none;
+	position: absolute;
+	text-align: center;
+    width: 34px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid #F5F5F5;
+    padding: 5px 5px;     
+    color: #FFFFFF;
+    margin-left: 48px;
+    margin-top: 2px;   
+    display: none;
+}
+.pagedownlist > li:hover{
+	cursor: pointer;
+}
+
+
+/*图表区域*/
+.chartarea{
+	height: 300px;	
+}
+
+/*表格区域*/
+.tablearea{
+	/*背景渐变*/
+	background:linear-gradient(top, #252834, #141625);  
+	background:-moz-linear-gradient(top, #252834,#141625);  
+	background:-0-linear-gradient(top, #252834, #141625);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#252834), to(#141625));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252834', endColorstr='#141625',GradientType=0 );
+	background: -ms-linear-gradient(top, #252834, #141625); 
+	
+	border-radius: 8px;	
+	margin: 15px 2px;
+	padding: 25px 0;
+	height: auto;
+}
+.tabletitle{
+	border-top: 0;
+	font-weight: 600;	
+}
+.tabletitle > th{	
+	text-align: center;
+}
+.table{
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+}
+ .table > tbody > tr > td{ 	
+ 	border-top: 1px solid #898a8f;
+	padding:12px;
+ }
+ 
+ .table > tbody > tr:hover{
+	 background-color: rgba(1,180,236,0.4);
+ }
+
+@media screen and (max-width: 767px){
+	.table-responsive {
+		border: 0;
+	}	
+}
