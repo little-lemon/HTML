@@ -1,0 +1,279 @@
+/***************
+*页面样式
+****************/
+
+/*===========
+基本默认样式
+===========*/
+html{
+    font-size: 62.5%;
+    color: #222;
+}
+
+::selection{
+    background-color: #b3d4fc;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+/*===========
+工具样式
+===========*/
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right{
+     float: right !important;
+ }
+
+.pull-left{
+    float: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block; !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.text-hide{
+    font:0/0 a;
+    color:transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+/*==============
+浏览器更新提示
+===============*/
+.browserupgrade{
+    margin: 0;
+    padding: 1rem;
+    background-color: #ccc;
+}
+
+/*==============
+自定义页面样式
+===============*/
+body{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+a{
+    color:#666;
+    text-decoration: none;
+}
+
+a:hover,a:active{
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/*网站头部*/
+header{
+    width:100%;
+}
+
+header .top{
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    color: #fff;
+    background-color: #555;
+    border-bottom: 1px #ecc000 solid;
+}
+
+header .top .tel{
+    float: left;
+}
+
+header .top ul{
+    text-align: right;
+}
+
+header .top ul li{
+    display: inline-block;
+}
+
+header .top ul li + li{
+    border-left: 1px solid #999;
+    margin-left: -3px;
+}
+
+header .top ul li a{
+    display: inline-block;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+
+header .main{
+    padding: 0;
+}
+
+header .main .brand{
+    float:left;
+    padding: 1rem 1.5rem 0;
+}
+
+header .main ul{
+    text-align: right;
+}
+
+header .main ul li{
+    display: inline-block;
+    border-left: 1px solid #f0ede9;
+}
+
+header .main ul li a{
+    display: inline-block;
+    padding: 0 2.5rem;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7c7a65;
+    text-decoration: none;
+}
+
+header .main ul li a:hover,
+header .main ul li a:active,
+header .main ul li a.active{
+    color:#ffb300;
+    background-color: #f8f6f1;
+}
+
+/*网站主要内容*/
+.container{
+    width:100%;
+}
+
+/*交易信息*/
+.transaction{
+    width:100%;
+    background-color: #7c7365;
+}
+
+.trans-content{
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: left;
+}
+
+.trans-data{
+    float: left;
+    padding: 1rem;
+    text-align: left;
+}
+
+.trans-data span{
+    float: left;
+    padding: 1rem;
+    text-align: left;
+}
+
+.trans-data span.trans-money{
+    font-size: 2.2rem;
+    color:#ff9900;
+    letter-spacing: 3px;
+    margin:0 1rem;
+    padding: 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 1px 2px 1px #33 inset;
+}
+
+.trans-report{
+    text-align: right;
+}
+
+.trans-report a{
+    display: inline-block;
+    padding: 1rem;
+    line-height: 3rem;
+    color: #fff;
+}
+
+/*滚动广告*/
+
+.ad{
+    display: none;
+}
+
+.feature{
+    width:90%;
+    margin:2rem auto;
+    font-size: 0;
+}
+
+.feature .item{
+    display: inline-block;
+    width:calc(33.3333% - 3rem);
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.feature .item + .item{
+    margin-left: 1.5rem;
+}
+
+.feature .item h3{
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font-size: 3.3rem;
+    text-align: center;
+    color: #ff9900;
+}
+
+.feature .item p {
+    display: inline-block;
+    width: 55%;
+    margin: 0;
+    padding: 0;
+    color: #999;
+}
+
+
+
