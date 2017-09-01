@@ -65,39 +65,38 @@ define(['../common','exports','jquery'],function (common,exports,$) {
 	}
 	
 	page.prototype.createPage = function(){
-		pageInfo = this;
 		//	左侧分页内容
 		var lpageCont = '';
 		lpageCont += '<div class="text-left"> 每页显示 ';		
-		lpageCont += '<span id="crow">'+pageInfo.pageOpts.limit+'</span>';
+		lpageCont += '<span id="crow">'+this.pageOpts.limit+'</span>';
 		lpageCont += '<a><img src="images/pagedown.png" class="pagedown pd1"/></a>';
-		lpageCont += '<ul class="pagedownlist" id="colcount" style="margin-top:'+ -(pageInfo.pageOpts.pagerow.length*18 +12 + 16) +'px;">';		
+		lpageCont += '<ul class="pagedownlist" id="colcount" style="margin-top:'+ -(this.pageOpts.pagerow.length*18 +12 + 16) +'px;">';		
 		var rowlist = '';		
-		for(var i=0,len=pageInfo.pageOpts.pagerow.length;i<len;i++){
-			rowlist += '<li>'+pageInfo.pageOpts.pagerow[i]+'</li>';
+		for(var i=0,len=this.pageOpts.pagerow.length;i<len;i++){
+			rowlist += '<li>'+this.pageOpts.pagerow[i]+'</li>';
 		}
 		rowlist += '</ul> 条 | 共 ';
 		lpageCont += rowlist;		
-		lpageCont += '<span>'+pageInfo.pageOpts.total+'</span> 条 </div>';
+		lpageCont += '<span>'+this.pageOpts.total+'</span> 条 </div>';
 		
 		//	右侧分页内容
 		var rpageCont = '';
 		rpageCont += '<div class="text-right"> 第 ';
-		rpageCont += '<span id="cpage">'+pageInfo.pageOpts.currpage+'</span> ';
+		rpageCont += '<span id="cpage">'+this.pageOpts.currpage+'</span> ';
 		rpageCont += '<a><img src="images/pagedown.png" class="pagedown pd2"/></a> '		
-		rpageCont += '<ul class="pagedownlist" id="pagecount" style="margin-top:'+ -(pageInfo.pageOpts.pageCount*18 +12 +16) +'px;">';		
+		rpageCont += '<ul class="pagedownlist" id="pagecount" style="margin-top:'+ -(this.pageOpts.pageCount*18 +12 +16) +'px;">';		
 		var pageList = '';
-		for(var i = 1,len=pageInfo.pageOpts.pageCount; i <= len; i++){
+		for(var i = 1,len=this.pageOpts.pageCount; i <= len; i++){
 			pageList += '<li>'+i+'</li>';
 		}
 		pageList += '</ul>页 | 共 ';
 		rpageCont += pageList;
-		rpageCont += '<span id="sumpage">'+pageInfo.pageOpts.pageCount+'</span> 页 ';
+		rpageCont += '<span id="sumpage">'+this.pageOpts.pageCount+'</span> 页 ';
 		rpageCont += '<a class="prepage">上一页</a><a class="nextpage">下一页</a></div>';
 		
-		$(pageInfo.pageOpts.el).html(lpageCont + rpageCont);
-		pageInfo.pageLeftEventInit('.pd1');
-		pageInfo.pageRightEventInit('.pd2');
+		$(this.pageOpts.el).html(lpageCont + rpageCont);
+		this.pageLeftEventInit('.pd1');
+		this.pageRightEventInit('.pd2');
 		return this;
 	}
 	
@@ -158,11 +157,13 @@ define(['../common','exports','jquery'],function (common,exports,$) {
 				var limit = parseInt(that.pageOpts.limit);
 				var currpage = parseInt($('#cpage').text());
 				//that.currpage = Math.ceil( (limit*currpage)/$(this).text() );
-				var tmp = $(that.gridOpts.el).find('tr');
 				//var tmp = tableEment.(tr);
-				console.log(tmp);
-				that.pageOpts.currpage = Math.ceil( (limit*currpage)/$(this).text() );
-				console.log(that.pageOpts.currpage);
+				var trlen = $(that.gridOpts.el).find('tr').length;
+				if( trlen < limit ){
+					that.pageOpts.currpage = Math.ceil( that.pageOpts.total / $(this).text() );
+				}else{
+					that.pageOpts.currpage = Math.ceil( (limit*currpage)/$(this).text() );
+				}
 				that.pageOpts.limit = $(this).text();
 				that.setData();
 			}else{
@@ -175,8 +176,6 @@ define(['../common','exports','jquery'],function (common,exports,$) {
 		
 		return this;
 	}
-	
-	//new page().init();
 	
 	exports.page = new page();
 
