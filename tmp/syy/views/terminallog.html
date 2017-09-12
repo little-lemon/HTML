@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>终端日志</title>
+    <link rel="stylesheet" type="text/css" href="../themes/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../themes/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../themes/css/terminallog.css"/>
+    <link rel="stylesheet" type="text/css" href="../themes/css/jedate.css"/>
+    <link rel="stylesheet" type="text/css" href="../themes/css/applyTable.css"/>
+
+</head>
+<body>
+	
+	<div class="publicTitle clearfix">
+		<div class="logTitle">
+			<h1>终端日志</h1>
+		</div>
+	</div>
+
+    <div class="container">
+    	<!--查询区域-->	
+    	<div class="row queryarea">
+    		<form>    			
+	    		<div class="queleft">
+    				<ul class="lineul" style="overflow:hidden">
+		    			<li>
+		    				<span>开始时间</span>
+		    				<input type="text" id="starttime"/>
+		    			</li>
+		    			<li>
+		    				<span>应用名称</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li>
+		    				<span>用户名</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li>
+		    				<span style="letter-spacing: 4px;">URL</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span style="letter-spacing: 3px;">用户IP</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span style="letter-spacing: 8px;">源IP</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span>目标IP</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span>源端口</span>
+		    				<input type="text" />
+		    			</li>		    			
+		    			<li class="hidecont">
+		    				<span>目标端口</span>
+		    				<input type="text" />
+		    			</li>	    				    			
+	    			</ul>
+	    			<a class="downarrow" id="showsearch"></a>
+    			</div>
+    			
+    			<div class="queright">
+    				<div class="querybtnarea">
+    					查询
+    				</div>	
+    			</div>
+    		</form>
+    		    		
+    		
+    	</div>
+    	<!--表格区域-->
+    	<div class="row tablearea">
+    		<!-- <table class="table table-responsive" >
+	    		<tr class="tabletitle">
+	    			<th width="3%"></th>
+	    			<th>序号</th>
+	    			<th>应用名称</th>
+	    			<th>发生时间</th>
+	    			<th>用户</th>
+	    			<th>用户IP</th>
+	    			<th>源IP</th>
+	    			<th>目标IP</th>
+	    			<th>发送流量(M)<img src="../themes/images/pagedown.png" /></th>
+	    			<th>接收流量(M)</th>
+	    			<th>源端口</th>
+	    			<th>目的端口</th>
+	    			<th>协议</th>
+	    			<th>URL</th>
+	    			<th width="3%"></th>
+	    		</tr>
+	    		
+	    	</table> -->
+			<div id="table"></div>
+	    	
+	    	<!--分页部分-->
+    		<!--左侧-->
+    		<div class="pagecontent"></div>	
+	    	<!--</div>-->
+	    	
+	    	
+    	</div>
+    	
+    	
+    </div>
+	
+	
+	
+</body>
+<script data-main="../js/terminallog" src="../js-lib/require/require.js"></script>
+</html>

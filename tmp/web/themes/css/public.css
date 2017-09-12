@@ -1,0 +1,63 @@
+ul,ol,dl,dt,dd{list-style:none;margin:0;padding:0;}
+a:hover, a:focus{text-decoration: none;}
+h1,h2,h3,h4,h5,h6{padding:0;margin:0;}
+.container{  
+    width: 900px;
+    max-width:900px;
+    height: auto;   
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+    border-left: 1px dashed #dfdfdf;
+    border-right: 1px dashed #dfdfdf;
+}
+.reportContan{
+	background-color: #ffffff;
+	overflow: hidden;
+	font-size: 14px;
+	color: #585d63;
+	padding: 0 50px;
+}
+.cover{
+	background-color: #ffffff;
+	overflow: hidden;
+	font-size: 14px;
+	color: #585d63;
+}
+.cover .cover_top_logo{
+	width: 310px;
+	height: 80px;
+	background: url(../images/report_logo.png) no-repeat;
+	margin: 130px 0 190px 60px;
+}
+.cover .cover_title_box {
+    width: 100%;
+    height: 150px;
+    border-right: 10px solid #115bb2;
+    background: #e7f2ff;
+    text-align: right;
+    margin-bottom: 420px;
+    box-sizing: border-box;
+    padding-right: 90px;
+}
+.cover .cover_title_box .cover_title{
+	font-size: 50px;
+	color: #12417b;
+	line-height: 100px;
+}
+.cover .cover_title_box .cover_tit_time{
+	font-size: 18px;
+	color: #184378;
+}
+.cover .cover_make_box{
+	width: 100%;
+	font-size: 22px;
+	color: #606060;
+	margin-bottom: 150px;
+}
+.cover .cover_make_box .cover_make_unit{
+	width: 30%;
+	font-size: 22px;
+	margin-left: 60%;
+}
+

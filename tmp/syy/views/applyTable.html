@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>应用日志页-明细查询页</title>
+    <link rel="stylesheet" type="text/css" href="../themes/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../themes/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../themes/css/applyTable.css"/>
+    <link rel="stylesheet" type="text/css" href="../themes/css/jedate.css"/>
+
+</head>
+<body>
+
+	<div class="publicTitle clearfix">
+		<div class="logTitle">
+			<h1>应用日志</h1>
+		</div>
+		<div class="back">
+			<a class="headicon" href="applyLog.html">
+				<span> 返回</span>
+			</a>
+		</div>
+	</div>
+
+    <div class="container">
+    	<!--图表区域-->
+    	<div class="row chartrow" style="margin: 0px">
+    		<div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0">
+    			<div class="chartarea">
+    				<div id="datachart" style="height: 100%;"></div>
+    			</div>  
+    			<div class="chartarea" style="float: right;">
+    				<h1 class="charttitle">IP流量排行</h1>
+    				<div class="chartRightTable clearfix">
+						<dl class="clearfix">
+							<dt>排名</dt>
+							<dt>IP地址</dt>
+							<dt>总流量值</dt>
+							<dd>1</dd>
+							<dd>10.4.8.99</dd>
+							<dd>102458M</dd>
+							<dd>2</dd>
+							<dd>10.4.8.99</dd>
+							<dd>87495M</dd>
+							<dd>3</dd>
+							<dd>10.4.8.99</dd>
+							<dd>67895M</dd>
+							<dd>4</dd>
+							<dd>10.4.8.99</dd>
+							<dd>54365M</dd>
+							<dd>5</dd>
+							<dd>10.4.8.99</dd>
+							<dd>46987M</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>排名</dt>
+							<dt>IP地址</dt>
+							<dt>总流量值</dt>
+							<dd>6</dd>
+							<dd>10.4.8.99</dd>
+							<dd>102458M</dd>
+							<dd>7</dd>
+							<dd>10.4.8.99</dd>
+							<dd>87495M</dd>
+							<dd>8</dd>
+							<dd>10.4.8.99</dd>
+							<dd>67895M</dd>
+							<dd>9</dd>
+							<dd>10.4.8.99</dd>
+							<dd>54365M</dd>
+							<dd>10</dd>
+							<dd>10.4.8.99</dd>
+							<dd>46987M</dd>
+						</dl>
+					</div>
+    			</div>
+    		</div>    		
+    	</div>
+    	<!--查询区域-->	
+    	<div class="row queryarea">
+    		<form>
+    			
+    			<div class="queleft">
+    				<ul class="lineul">
+		    			<li>
+		    				<span>开始时间</span>
+		    				<input type="text" id="starttime"/>
+		    			</li>
+		    			<li>
+		    				<span>应用名称</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li>
+		    				<span>用户名</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li>
+		    				<span style="letter-spacing: 4px;">URL</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span style="letter-spacing: 3px;">用户IP</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span style="letter-spacing: 8px;">源IP</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span>目标IP</span>
+		    				<input type="text" />
+		    			</li>
+		    			<li class="hidecont">
+		    				<span>源端口</span>
+		    				<input type="text" />
+		    			</li>		    			
+		    			<li class="hidecont">
+		    				<span>目标端口</span>
+		    				<input type="text" />
+		    			</li>	    				    			
+	    			</ul>
+	    			<a class="downarrow" id="showsearch"></a>
+    			</div>
+    			
+    			<div class="queright">
+    				<div class="querybtnarea">
+    					查询
+    				</div>	
+    			</div>
+    			
+    		</form>
+    		   		
+    		
+    	</div>
+    	<!--表格区域-->
+    	<div class="row tablearea">
+    		<table class="table table-responsive table-hover" >
+    			<thead>
+		    		<tr class="tabletitle">
+		    			<th width="3%"></th>
+		    			<th>序号</th>
+		    			<th>应用名称</th>
+		    			<th>发生时间</th>
+		    			<th>用户</th>
+		    			<th>用户IP</th>
+		    			<th>源IP</th>
+		    			<th>目标IP</th>
+		    			<th>发送流量(M) <a href=""><img src="../themes/images/pagedown.png" /></a></th>
+		    			<th>接收流量(M)</th>
+		    			<th>源端口</th>
+		    			<th>目的端口</th>
+		    			<th>协议</th>
+		    			<th>URL</th>
+		    			<th width="3%"></th>
+		    		</tr>
+	    		</thead>
+	    		
+	    	</table>
+	    	
+	    	<!--分页部分-->	    	
+    		<!--左侧-->
+    		<div class="pagecontent"></div>	
+	    		    	
+	    	
+    	</div>
+    	
+    	
+    </div>
+    
+     	
+
+
+
+</body>
+<script data-main="../js/applyTable" src="../js-lib/require/require.js"></script>
+</html>

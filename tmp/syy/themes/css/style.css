@@ -1,0 +1,342 @@
+*{
+	padding:0;
+	margin: 0;
+	border:none;
+	/*16px=1em;*/	
+}
+
+/*页面滚动条*/
+::-webkit-scrollbar{
+	width: 0px;
+}
+
+
+
+
+li,ul{
+	list-style: none;
+}
+.none{display: none;}
+
+a{
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+html,body{background:#fff;}
+body,ol,ul,h1,h2,h3,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,img{margin:0;padding:0;}
+html,body{height:100%!important; background-color: #21232F;font-family: '微软雅黑' !important;}
+body,button,input,select,textarea{font:12px/1.5 Tahoma,Arial,'Hiragino Sans GB','Microsoft YaHei',\5b8b\4f53,sans-serif;}
+h1,h2,h3,h5,h6{font-size:100%;}
+ul,ol,dl{list-style:none;}
+ul.default{list-style:disc inside;}
+ol.default{list-style:decimal inside;}
+fieldset,img{border:0 none;}
+table{border-collapse:collapse;border-spacing:0;}
+
+.publicTitle{
+	width: 100%;
+	padding: 8px 1% 0;
+	/* max-width: 1920px;
+	min-width: 1120px; */
+}
+.publicTitle .logTitle{
+	color:#fff;
+	font-size: 16px;
+	float: left;
+}
+.publicTitle .logTitle img{
+	cursor:pointer;
+}
+.publicTitle .logTitle span{
+	position: relative;
+	top:2px;
+}
+
+.publicTitle .logTitle h1{
+	display: block;
+	height:30px;
+	background-image: url('../images/icon.png');
+	background-repeat:no-repeat;
+	padding-left: 45px;
+	line-height: 36px;
+}
+
+.publicTitle .back{
+	display: inline; float: right;margin-right: 1%;
+	margin-top: 6px;
+}
+
+/*头部按钮样式*/
+.publicTitle .headicon{
+	font-size: 14px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.publicTitle .headicon span{
+	background-image: url('../images/back.png');
+	background-size:18px auto;
+	background-repeat:no-repeat;
+	padding-left: 24px;
+}
+
+.publicTitle .headicon:hover{
+	color: #FFFFFF;
+}
+
+.publicNav{
+	width: 100%;
+	padding: 8px 1% 0;
+	/* max-width: 1920px;
+	min-width: 1120px; */
+}
+.publicNav .chooseTime{
+	width: 100%;
+	height: auto;
+    padding: 17px 31px;
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27, #0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background: -ms-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#171B27), to(#0D0E22));  
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+}
+.publicNav .chooseTime ul{
+	width: 61%;
+	font-size: 12px;
+	color:#fff;
+	float: left;
+	border-right: 1px solid rgba(255,255,255,.4);
+}
+.publicNav .chooseTime ul.current{
+	width: 44%;
+}
+.publicNav .chooseTime ul.current li{
+	width: 16.666%;
+}
+.publicNav .chooseTime ul li{
+	float: left;
+	padding: 4px 0;
+    border: 1px solid rgba(255,255,255,.4);
+    border-right: 0;
+    cursor: pointer;
+    width: 11.11%;
+    text-align: center;
+}
+.publicNav .chooseTime ul li:hover{
+	background-color: #01B4EC;
+}
+.publicNav .chooseTime ul li.current{
+	background-color: #01B4EC;
+}
+.publicNav .chooseTime a{
+    display: block;
+    float: right;
+    background-color: #01B4EC;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 18px;
+    text-decoration: none;
+}
+
+/*查询区域背景*/
+.queryarea{
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27,#0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#171B27), to(#0D0E22));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+	background: -ms-linear-gradient(top, #171B27, #0D0E22); 
+	border-radius: 8px;	
+	margin: 10px 2px;
+	padding: 30px 20px;
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.oneline,.twoline,.threeline{
+	width: 100%;
+	height: 37px;
+}
+
+.none{
+	display:none;
+}
+
+.lineul{
+	height: 100%;
+	position: relative;
+	list-style: none;
+}
+.lineul > li {
+	width: 20%;
+	margin: 8px 10px;
+	float: left;	
+	white-space: nowrap;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.lineul > li > span{
+	margin-right: 10px;
+	width: 10%;
+	color:#FFFFFF;
+	font-size: 12px;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	display: inline;
+	
+}
+/*开始时间输入框*/
+#starttime{
+	background: url(../images/calendar.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #262835;
+}
+.lineul > li > input{
+	width: 61%;
+	height: 25px;
+	background-color: #262835;
+	border-radius: 4px;
+	border: 0;
+	color: #FFFFFF;
+	text-indent: 1em;	
+	font-size:12px;
+}
+
+
+/*图表区域*/
+.chartarea{
+	height: 300px;	
+}
+
+/*表格区域*/
+.tablearea{
+	/*背景渐变*/
+	background:linear-gradient(top, #171B27, #0D0E22);  
+	background:-moz-linear-gradient(top, #171B27,#0D0E22);  
+	background:-0-linear-gradient(top, #171B27, #0D0E22);  
+	background:-webkit-gradient(linear, 0 0,0 bottom, from(#171B27), to(#0D0E22));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171B27', endColorstr='#0D0E22',GradientType=0 );
+	background: -ms-linear-gradient(top, #171B27, #0D0E22); 
+	
+	border-radius: 8px;	
+	margin: 15px 2px 0;
+	padding: 0px 0 15px;
+	height: auto;
+}
+.tabletitle{
+	border-top: 0;
+	font-weight: 600;	
+}
+
+.tabletitle > th{	
+	text-align: center;
+	padding: 18px 0 !important;
+	border:0 !important;
+}
+.table{
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 12px;
+}
+ .table > tbody > tr > td{ 	
+ 	border-top: 1px solid rgba(255,255,255,.1);
+ 	padding:13px 0;
+ }
+.table-hover > tbody > tr:hover {
+  background-color: rgba(1,180,236,0.4);
+  border: 0;  
+}
+
+/*分页样式设计*/
+
+.pagedown{
+	color: #FFFFFF;	
+	background-color: #262835;	
+}
+
+/*分页左侧部分*/
+.text-left{
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 12px;
+}
+
+.text-left > a{
+	margin-left: 5px;
+}
+
+/*分页右侧部分*/
+.text-right{
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+	font-size: 12px;
+}
+
+.text-right > a{
+	margin-left: 1px;
+}
+
+.text-right > ul{
+	margin-left: 17px;
+}
+
+/*分页按钮样式*/
+.prepage,.nextpage{
+	border: 1px solid #898a8f;
+	padding: 2px 10px;
+	margin: 0 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.prepage:hover,.nextpage:hover{
+	color: #FFFFFF;
+}
+.pagecontent{
+	color: #FFFFFF;
+	margin-top: 25px;
+}
+/*分页下拉按钮*/
+.pagedown{
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 3px;
+	margin-left: 0 1px;
+	padding: 2px;
+	/*background-image: url(../images/pagedown.png);*/
+	/*background-repeat: no-repeat;*/
+}
+.pagedown:hover{
+	cursor: pointer;
+}
+
+/*分页下拉内容*/
+.pagedownlist{
+	background-color:#171B27;
+	list-style: none;
+	position: absolute;
+	text-align: center;
+    width: 34px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 5px 5px;     
+    color: #FFFFFF;
+    margin-left: 48px;
+    margin-top: 2px;   
+    display: none;
+}
+.pagedownlist > li{
+	height:18px;
+	padding:0;
+}
+.pagedownlist > li:hover{
+	cursor: pointer;
+}

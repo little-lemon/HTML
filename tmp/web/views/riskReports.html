@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>APT防御产品风险分析报告</title>
+	<link rel="stylesheet" type="text/css" href="../themes/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../themes/css/public.css">
+	<link rel="stylesheet" type="text/css" href="../themes/css/riskReports.css" />
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../js/echarts.js"></script>
+</head>
+<body>
+	<!-- 封面 -->
+	<div class="cover container" id="cover">
+		<div class="cover_top_logo"></div>
+		<div class="cover_title_box">
+			<div class="cover_title">APT防御产品风险分析报告</div>
+			<div class="cover_tit_time">
+				时间范围：
+				<span>2016-01-10 至 2016-10-31</span>
+			</div>
+		</div>
+		<div class="cover_make_box">
+			<div class="cover_make_unit">
+				制作时间：<span class="cus">2016-11-01</span>
+			</div>
+			<div class="cover_make_unit">
+				制作单位：<span>黑盾APT产品</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- 一、报告说明 -->
+	<div class="reportContan container" id="reportShows">
+		<h1 class="headings">一、报告说明</h1>
+		<div class="report_contain">
+			本分析报告提供对数据库在 2016-09-11 至 2016-10-10  的时间范围内的监控记录，并对监控记录进行分析、得出结论，形成风险分析报告，以供分析网络安全状况，提供依据。
+		</div>
+	</div>
+
+	<!-- 二、基本结论及风险提示 -->
+	<div class="reportContan container" id="riskWarn">
+		<h1 class="headings">二、基本结论及风险提示</h1>
+		<div class="Segment">
+			<h5 class="report_time">
+				在 2016-09-11 至 2016-10-10 监控时间范围内： 
+			</h5>
+			<div class="report_assessment">
+				<div class="riskGuage" id="riskGuage"></div>
+				<div class="riskLevel">
+					风险等级：<span>高风险</span>
+				</div>
+				<div class="evaluation">
+					安全风险等级评估
+				</div>
+			</div>
+		</div>
+		<div class="report_item">
+			<div class="report_table clearfix">
+				<div class="report_two">
+					<div class="report_graphic">
+						<img src="../themes/images/attack.png" alt="" class="img-responsive" />
+					</div>
+				</div>
+				<div class="report_four">
+					<div class="report_items cus">
+						<ul>
+							<li>①<span>10.4.8.121、10.4.8.122、10.4.8.123</span>已被入侵;</li>
+							<li>②<span>10.4.8.124、10.4.8.125</span>曾被攻击;</li>
+							<li>②<span>10.4.8.126、10.4.8.127</span>与C&C服务器存在通信;</li>
+							<li>②<span>10.4.8.18</span>与黑名单IP存在通信;</li>
+						</ul>
+					</div>
+					<div class="report_items">
+						<ul>
+							<li>受攻击次数<span>194772</span>次;</li>
+							<li>APT攻击事件总数<span>24</span>条;</li>
+							<li>其他事件关联证据数<span>6381</span>条;</li>
+						</ul>
+					</div>
+				</div>
+				<div class="report_three">
+					<ul>
+						<li>
+							<span>建议：</span>1、断开被入侵主机所有的对外连接，禁止其向外通信，检查信息泄露情况并进行修复，漏洞扫描和加固
+						</li>
+						<li>
+							2、加强被攻击主机的安全防护，针对被攻击主机进行漏洞扫描，避免0day漏洞
+						</li>
+						<li>
+							3、添加C&C服务器IP以及黑名单IP到防火墙，拦截与内网IP之间的通信
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 三、威胁事件分析 -->
+	<div class="reportContan container" id="threatEvents">
+		<h1 class="headings">三、威胁事件分析</h1>
+		<div class="report_contain">
+			柱状图统计了最近一月各事件类别产生的事件总数，通过查阅柱状统计图，可以了解主要的威胁事件类型。
+		</div>
+
+		<div class="Segment">
+			<h5 class="report_time cus">
+				事件分布柱状图： 
+			</h5>
+			<div class="report_assessment">
+				<div class="eventDistribution" id="eventDistribution"></div>
+			</div>
+		</div>
+
+		<div class="Segment">
+			<h5 class="report_time cus">
+				事件总数趋势图： 
+			</h5>
+			<div class="report_assessment">
+				<div class="totalEvents" id="totalEvents"></div>
+			</div>
+		</div>
+
+		<div class="greaThanTwo">
+			<h4 class="title">受攻击事件Top（共24条）</h4>
+			<table class="strve">
+				<thead>
+					<tr>
+						<th>被攻击IP</th>
+						<th>事件名</th>
+						<th>事件分类</th>
+						<th>受攻击情况</th>
+						<th>事件时间</th>
+						<th>攻击次数</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attacked">10.4.8.121[ 局域网 ]</td>
+						<td>基于Sql Server数据库的SQL注入攻击</td>
+						<td class="classification">SQL注入</td>
+						<td class="condition">已被入侵</td>
+						<td>2016-10-10 23:55:22
+						<br/>
+						2016-10-10 23:55:23 
+						<br/>
+						持续时间1秒</td>
+						<td class="frequency">246</td>
+					</tr>
+					<tr>
+						<td class="attacked">10.4.8.121[ 局域网 ]</td>
+						<td>基于Sql Server数据库的SQL注入攻击</td>
+						<td class="classification">SQL注入</td>
+						<td class="condition">已被入侵</td>
+						<td>2016-10-10 23:55:22
+						<br/>
+						2016-10-10 23:55:23 
+						<br/>
+						持续时间1秒</td>
+						<td class="frequency">246</td>
+					</tr>
+					<tr>
+						<td class="attacked">10.4.8.121[ 局域网 ]</td>
+						<td>基于Sql Server数据库的SQL注入攻击</td>
+						<td class="classification">SQL注入</td>
+						<td class="condition">已被入侵</td>
+						<td>2016-10-10 23:55:22
+						<br/>
+						2016-10-10 23:55:23 
+						<br/>
+						持续时间1秒</td>
+						<td class="frequency">246</td>
+					</tr>
+					<tr>
+						<td class="attacked">10.4.8.121[ 局域网 ]</td>
+						<td>基于Sql Server数据库的SQL注入攻击</td>
+						<td class="classification">SQL注入</td>
+						<td class="condition">已被入侵</td>
+						<td>2016-10-10 23:55:22
+						<br/>
+						2016-10-10 23:55:23 
+						<br/>
+						持续时间1秒</td>
+						<td class="frequency">246</td>
+					</tr>
+					<tr>
+						<td class="attacked">10.4.8.121[ 局域网 ]</td>
+						<td>基于Sql Server数据库的SQL注入攻击</td>
+						<td class="classification">SQL注入</td>
+						<td class="condition">已被入侵</td>
+						<td>2016-10-10 23:55:22
+						<br/>
+						2016-10-10 23:55:23 
+						<br/>
+						持续时间1秒</td>
+						<td class="frequency">246</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="appendix">
+			事件总数超过5条，请通过<a href="#">附录</a>查看所有事件
+		</div>
+	
+		<div class="harm">
+			<h4 class="title">
+				3.1 111.75.198.123（通过端口等信息判断服务器类型）风险详情
+			</h4>
+		</div>	
+	
+		<div class="proof">
+			<h5>事件①：SQL Server数据库包里破解成功</h5>
+			<div class="attack_proof">
+				攻击举证（被攻击者IP：111.75.198.123）
+			</div>
+			<div class="transitions clearfix">
+				<dl>
+					<dt>
+						<div class="sequence">1</div>
+						<div class="colorBar"></div>
+					</dt>
+					<dd class="clearfix">
+						<div class="pic">
+							<img src="../themes/images/ico-1_01.png" alt="" class="img-responsive">
+						</div>
+						<div class="news">
+							<h6 class="green">SQL Server 2005暴力破解失败</h6>
+							<div class="data_time">
+								2016-10-12 16:14:33
+								<br/>
+								2016-10-12 16:14:54
+							</div>
+							<div class="attack_number">
+								共攻击<span class="green">35</span>次
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<div class="sequence">2</div>
+						<div class="colorBar"></div>
+					</dt>
+					<dd class="clearfix">
+						<div class="pic">
+							<img src="../themes/images/ico-1_02.png" alt="" class="img-responsive">
+						</div>
+						<div class="news">
+							<h6 class="red">SQL Server 2005登录成功</h6>
+							<div class="data_time">
+								2016-10-12 16:14:33
+								<br/>
+								2016-10-12 16:14:54
+							</div>
+							<div class="attack_number">
+								共攻击<span class="red">1</span>次
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<div class="report_item">
+			<!-- <div class="report_header">
+				4.1.1 危险类型①：病毒文件
+			</div> -->
+			<div class="report_table clearfix">
+				<div class="report_two">
+					<div class="report_graphic">
+						<img src="../themes/images/danger.png" alt="" class="img-responsive" />
+						<div class="report_remark">
+							危害程度：<span>已被入侵</span>（用户名密码暴力破解）
+						</div>
+					</div>
+				</div>
+				<div class="report_four">
+					<div class="report_items cus">
+						<ul>
+							<li class="caption">事件描述：</li>
+							<li>
+								从2016-10-12 16:14:33开始，有攻击者针对<span>111.75.198.123</span>（xxx）进行SQL Server数据库用户名密码的暴力破解，并且在2016-10-12 16:14:55成功登陆数据库，获取部分信息。
+							</li>
+						</ul>
+					</div>
+					<div class="report_items">
+						<ul>
+							<li class="caption">危险性：</li>
+							<li>
+								攻击者在破解成功后即可获取合法用户的权限，甚至可以破解管理员的密码进而控制整个站点。
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="report_three">
+					<ul>
+						<li>
+							<span>建议：</span>1、根据数据库日志确认攻击者操作，依据操作内容制定策略。
+						</li>
+						<li>
+							2、在登陆时使用验证码进行验证登陆。
+						</li>
+						<li>
+							3、使用tokens生成form_hash，然后验证。
+						</li>
+						<li>
+							4、在使用随机数时，要确保用户无法获取随机数生成算法
+						</li>
+						<li>
+							5、身份验证需要用户凭短信、邮件接受验证码时，需要对验证次数做限制
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="proof">
+			<h5>事件①：SQL Server数据库包里破解成功</h5>
+			<div class="attack_proof">
+				攻击举证（被攻击者IP：111.75.198.123）
+			</div>
+			<div class="transitions clearfix">
+				<dl>
+					<dt>
+						<div class="sequence">1</div>
+						<div class="colorBar"></div>
+					</dt>
+					<dd class="clearfix">
+						<div class="pic">
+							<img src="../themes/images/ico-1_01.png" alt="" class="img-responsive">
+						</div>
+						<div class="news">
+							<h6 class="green">SQL Server 2005暴力破解失败</h6>
+							<div class="data_time">
+								2016-10-12 16:14:33
+								<br/>
+								2016-10-12 16:14:54
+							</div>
+							<div class="attack_number">
+								共攻击<span class="green">35</span>次
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<div class="sequence">2</div>
+						<div class="colorBar"></div>
+					</dt>
+					<dd class="clearfix">
+						<div class="pic">
+							<img src="../themes/images/ico-1_07.png" alt="" class="img-responsive">
+						</div>
+						<div class="news">
+							<h6 class="yellow">SQL注入 获取MSSQL数据库关键表</h6>
+							<div class="data_time">
+								2016-10-12 16:14:33
+								<br/>
+								2016-10-12 16:14:54
+							</div>
+							<div class="attack_number">
+								共攻击<span class="yellow">8</span>次
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<div class="sequence">3</div>
+						<div class="colorBar"></div>
+					</dt>
+					<dd class="clearfix">
+						<div class="pic">
+							<img src="../themes/images/ico-1_02.png" alt="" class="img-responsive">
+						</div>
+						<div class="news">
+							<h6 class="red">SQL注入 获取MSSQL数据库关键字段名</h6>
+							<div class="data_time">
+								2016-10-12 16:14:33
+								<br/>
+								2016-10-12 16:14:54
+							</div>
+							<div class="attack_number">
+								共攻击<span class="red">1</span>次
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="report_item">
+			<!-- <div class="report_header">
+				4.1.1 危险类型①：病毒文件
+			</div> -->
+			<div class="report_table clearfix">
+				<div class="report_two">
+					<div class="report_graphic">
+						<img src="../themes/images/danger.png" alt="" class="img-responsive" />
+						<div class="report_remark">
+							危害程度：<span>已被入侵</span>（SQL注入）
+						</div>
+					</div>
+				</div>
+				<div class="report_four">
+					<div class="report_items cus">
+						<ul>
+							<li class="caption">事件描述：</li>
+							<li>
+								从2016-10-13 11:30:34开始，有攻击者通过web服务器上的漏洞针对<span>111.75.198.123</span>（xxx）进行SQL Server数据库注入，并且成功获取关键数据库名以及关键表名等敏感信息。
+							</li>
+						</ul>
+					</div>
+					<div class="report_items">
+						<ul>
+							<li class="caption">危险性：</li>
+							<li>
+								1、数据库中存放的用户的隐私信息的泄露。
+							</li>
+							<li>
+								2、通过操作数据库对特定网页进行篡改。
+							</li>
+							<li>
+								3、修改数据库一些字段的值，嵌入网马链接，进行挂马攻击。
+							</li>
+							<li>
+								4、数据库服务器被攻击，数据库的系统管理员帐号
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="report_three">
+					<ul>
+						<li>
+							<span>建议：</span>1、根据数据库日志确认攻击者操作，依据操作内容制定策略。
+						</li>
+						<li>
+							2、在登陆时使用验证码进行验证登陆。
+						</li>
+						<li>
+							3、使用tokens生成form_hash，然后验证。
+						</li>
+						<li>
+							4、在使用随机数时，要确保用户无法获取随机数生成算法
+						</li>
+						<li>
+							5、身份验证需要用户凭短信、邮件接受验证码时，需要对验证次数做限制
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 四、危险行为分析 -->
+	<div class="reportContan container" id="riskBehavior">
+		<h1 class="headings">四、危险行为分析</h1>
+		
+		<div class="report_item">
+			<div class="report_header">
+				4.1.1 危险类型①：病毒文件
+			</div>
+			<div class="report_table clearfix">
+				<div class="report_two">
+					<div class="report_graphic">
+						<img src="../themes/images/kp.png" alt="" class="img-responsive" />
+						<div class="report_remark">
+							病毒文件<span>Win32/Oliga</span>（共涉及7条内网IP）
+						</div>
+					</div>
+				</div>
+				<div class="report_four">
+					<div class="report_items cus">
+						<ul>
+							<li class="caption">行为简述：</li>
+							<li class="sj">
+								 APT防御产品发现内网IP：111.75.198.123（xxx）上传/下载的文件中存在病毒或恶意代码。
+							</li>
+						</ul>
+					</div>
+					<div class="report_items">
+						<ul>
+							<li class="caption">危险性：</li>
+							<li class="sj">
+								木马病毒或恶意软件在入侵系统以后会修改系统文件，导致系统运行异常然后为黑客提供后台远控的接口，或者将该主机作为僵尸主机并对内网进行渗透攻击。
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="report_three">
+					<ul>
+						<li>
+							<span>建议：</span>1、根据证据详情中的IP与时间确认被感染主机并切断其对外连接。
+						</li>
+						<li>
+							2、根据病毒名称或病毒特征，确定相对应的清除策略。
+						</li>
+						<li>
+							3、若该病毒有传播性质，则所有内网主机自身需进行病毒扫描。
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="greaThanTwo">
+			<h4 class="title">4.1.2 攻击事件举证：</h4>
+			<table class="evidence">
+				<thead>
+					<tr>
+						<th>被攻击IP</th>
+						<th>病毒名称</th>
+						<th>时间</th>
+						<th>次数</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attacked">111.75.198.123</td>
+						<td class="classification">Win32/Oliga</td>
+						<td>2016-10-10 23:55:22</td>
+						<td class="frequency">2</td>
+						
+					</tr>
+					<tr>
+						<td class="attacked">111.75.198.123</td>
+						<td class="classification">Win32/Oliga</td>
+						<td>2016-10-10 23:55:22</td>
+						<td class="frequency">2</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="analysis">
+			<div class="appendix cus">
+				请通过<a href="#">附录</a>查看更多该危险类型实例
+			</div>
+			<div class="report_item">
+				<div class="report_header">
+					4.2.1 危险类型②：与C&C服务器的通信
+				</div>
+				<div class="report_table clearfix">
+					<div class="report_two">
+						<div class="report_graphic">
+							<img src="../themes/images/kp.png" alt="" class="img-responsive" />
+							<div class="report_remark">
+								<span>与C&C服务器的通信</span>（共涉及7条内网IP）
+							</div>
+						</div>
+					</div>
+					<div class="report_four">
+						<div class="report_items cus">
+							<ul>
+								<li class="caption">行为简述：</li>
+								<li class="sj">
+									 APT防御产品发现内网IP：111.75.198.123（xxx）上传/下载的文件中存在病毒或恶意代码。
+								</li>
+							</ul>
+						</div>
+						<div class="report_items">
+							<ul>
+								<li class="caption">危险性：</li>
+								<li class="sj">
+									C&C服务器，即远程命令和控制服务器，被攻击者的设备可以接收来自服务器的命令，从而达到服务器控制目标机器的目的。该方法常用于病毒木马控制被感染的机器。
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="report_three">
+						<ul>
+							<li>
+								<span>建议：</span>1、断开该内网IP的对外连接
+							</li>
+							<li>
+								2、将C&C服务器IP加入防火墙或路由器的访问控制列表
+							</li>
+							<li>
+								3、对该内网主机进行全面扫描，确认是否存在后门木马或病毒
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="greaThanTwo">
+				<h4 class="title">4.2.2 攻击事件举证：</h4>
+				<table class="event">
+					<thead>
+						<tr>
+							<th>事件类型</th>
+							<th class="widts">C&C通信</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="blueBackground">事件详情</td>
+							<td class="particulars">主机访问了疑似飞客蠕虫类C&C域名</td>
+						</tr>
+						<tr>
+							<td class="blueBackground">攻击举证</td>
+							<td class="particulars">主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div class="analysis">
+			<div class="appendix cus">
+				请通过<a href="#">附录</a>查看更多该危险类型实例
+			</div>
+			<div class="report_item">
+				<div class="report_header">
+					4.3.1 危险类型③：与受感染者或恶意主机的通信
+				</div>
+				<div class="report_table clearfix">
+					<div class="report_two">
+						<div class="report_graphic">
+							<img src="../themes/images/kp.png" alt="" class="img-responsive" />
+							<div class="report_remark">
+								<span>与受感染者或恶意主机的通信</span>（共涉及7条内网IP）
+							</div>
+						</div>
+					</div>
+					<div class="report_four">
+						<div class="report_items cus">
+							<ul>
+								<li class="caption">行为简述：</li>
+								<li class="sj">
+									APT防御产品发现内网IP：111.75.198.123（xxx）尝试与受感染者或恶意主机进行通信，服务器IP名单来自几个个人组织的整理，但是可靠性高。
+								</li>
+							</ul>
+						</div>
+						<div class="report_items">
+							<ul>
+								<li class="caption">危险性：</li>
+								<li class="sj">
+									与受感染者或恶意主机进行通信可能会导致僵尸木马的传播或者产生其他攻击行为。
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="report_three">
+						<ul>
+							<li>
+								<span>建议：</span>1、将该恶意主机IP加入防火墙或路由器的访问控制列表
+							</li>
+							<li>
+								2、对该内网主机进行全面扫描，确认是否存在后门木马或病毒
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="greaThanTwo">
+				<h4 class="title">4.3.2 攻击事件举证：</h4>
+				<table class="event">
+					<thead>
+						<tr>
+							<th>事件类型</th>
+							<th class="widts">C&C通信</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="blueBackground">事件详情</td>
+							<td class="particulars">主机尝试与受感染者或恶意主机进行通信</td>
+						</tr>
+						<tr>
+							<td class="blueBackground">攻击举证</td>
+							<td class="particulars">主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="analysis">
+			<div class="appendix cus">
+				请通过<a href="#">附录</a>查看更多该危险类型实例
+			</div>
+			<div class="report_item">
+				<div class="report_header">
+					4.4.1 危险类型④：与攻击者IP的通信（共涉及7条内网IP）
+				</div>
+				<div class="report_table clearfix">
+					<div class="report_two">
+						<div class="report_graphic">
+							<img src="../themes/images/kp.png" alt="" class="img-responsive" />
+							<div class="report_remark">
+								<span>与攻击者IP的通信</span>（共涉及7条内网IP）
+							</div>
+						</div>
+					</div>
+					<div class="report_four">
+						<div class="report_items cus">
+							<ul>
+								<li class="caption">行为简述：</li>
+								<li class="sj">
+									APT防御产品发现内网IP：111.75.198.123（xxx）尝试与已确认的攻击者IP进行通信，IP来源于DShield社区发布的最新的攻击者名单。
+								</li>
+							</ul>
+						</div>
+						<div class="report_items">
+							<ul>
+								<li class="caption">危险性：</li>
+								<li class="sj">
+									该黑名单IP列表为已确认的攻击者IP，进行通信可能会导致僵尸木马的传播或者产生其他攻击行为。
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="report_three">
+						<ul>
+							<li>
+								<span>建议：</span>1、将该攻击者IP加入防火墙或路由器的访问控制列表
+							</li>
+							<li>
+								2、对该内网主机进行全面扫描，确认是否存在后门木马或病毒
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="greaThanTwo">
+				<h4 class="title">4.4.2 攻击事件举证：</h4>
+				<table class="event">
+					<thead>
+						<tr>
+							<th>事件类型</th>
+							<th class="widts">C&C通信</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="blueBackground">事件详情</td>
+							<td class="particulars">主机尝试与已确认的攻击者IP进行通信</td>
+						</tr>
+						<tr>
+							<td class="blueBackground">攻击举证</td>
+							<td class="particulars">主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="analysis">
+			<div class="appendix cus">
+				请通过<a href="#">附录</a>查看更多该危险类型实例
+			</div>
+			<div class="report_item">
+				<div class="report_header">
+					4.5.1 危险类型⑤：与危险IP的通信（共涉及7条内网IP）
+				</div>
+				<div class="report_table clearfix">
+					<div class="report_two">
+						<div class="report_graphic">
+							<img src="../themes/images/kp.png" alt="" class="img-responsive" />
+							<div class="report_remark">
+								<span>与攻击者IP的通信</span>（共涉及7条内网IP）
+							</div>
+						</div>
+					</div>
+					<div class="report_four">
+						<div class="report_items cus">
+							<ul>
+								<li class="caption">行为简述：</li>
+								<li class="sj">
+									APT防御产品发现内网IP：111.75.198.123（xxx）尝试与危险IP进行通信，IP黑名单来自CINS Score（IP名誉数据库）
+								</li>
+							</ul>
+						</div>
+						<div class="report_items">
+							<ul>
+								<li class="caption">危险性：</li>
+								<li class="sj">
+									该黑名单IP为低信誉度的风险IP，进行通信可能会导致僵尸木马的传播或者产生其他攻击行为。
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="report_three">
+						<ul>
+							<li>
+								<span>建议：</span>1、将该危险IP加入防火墙或路由器的访问控制列表
+							</li>
+							<li>
+								2、对该内网主机进行全面扫描，确认是否存在后门木马或病毒
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="greaThanTwo">
+				<h4 class="title">4.5.2 攻击事件举证：</h4>
+				<table class="event">
+					<thead>
+						<tr>
+							<th>事件类型</th>
+							<th class="widts">C&C通信</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="blueBackground">事件详情</td>
+							<td class="particulars">主机尝试与危险IP进行通信</td>
+						</tr>
+						<tr>
+							<td class="blueBackground">攻击举证</td>
+							<td class="particulars">主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="analysis">
+			<div class="appendix cus">
+				请通过<a href="#">附录</a>查看更多该危险类型实例
+			</div>
+			<div class="report_item">
+				<div class="report_header">
+					4.6.1 危险类型⑥：与垃圾邮件发送者的通信（共涉及7条内网IP）
+				</div>
+				<div class="report_table clearfix">
+					<div class="report_two">
+						<div class="report_graphic">
+							<img src="../themes/images/kp.png" alt="" class="img-responsive" />
+							<div class="report_remark">
+								<span>与垃圾邮件发送者的通信</span>（共涉及7条内网IP）
+							</div>
+						</div>
+					</div>
+					<div class="report_four">
+						<div class="report_items cus">
+							<ul>
+								<li class="caption">行为简述：</li>
+								<li class="sj">
+									APT防御产品发现内网IP：111.75.198.123（xxx）尝试与垃圾邮件发送者进行通信。
+								</li>
+							</ul>
+						</div>
+						<div class="report_items">
+							<ul>
+								<li class="caption">危险性：</li>
+								<li class="sj">
+									在垃圾邮件中可能会存在僵尸病毒或者其他恶意软件与病毒。
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="report_three">
+						<ul>
+							<li>
+								<span>建议：</span>1、将该垃圾邮件发送者IP加入防火墙或路由器的访问控制列表
+							</li>
+							<li>
+								2、对该内网主机进行全面扫描，确认是否存在后门木马或病毒
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="greaThanTwo">
+				<h4 class="title">4.6.2 攻击事件举证：</h4>
+				<table class="event">
+					<thead>
+						<tr>
+							<th>事件类型</th>
+							<th class="widts">C&C通信</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="blueBackground">事件详情</td>
+							<td class="particulars">主机尝试与垃圾邮件发送者进行通信</td>
+						</tr>
+						<tr>
+							<td class="blueBackground">攻击举证</td>
+							<td class="particulars">主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							主机192.168.10.29与僵尸网络C&C服务器 218.85.65.150 进行通信 （1次）
+							<br/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 五、业务安全分析 -->
+	<div class="reportContan container" id="businessSecurity">
+		<h1 class="headings mgtop">五、业务安全分析</h1>
+		
+		<div class="Segment">
+			<div class="report_assessment">
+				<img src="../themes/images/st.png" alt="">
+			</div>
+		</div>
+
+		<div class="Segment">
+			<div class="report_assessment">
+				<img src="../themes/images/st.png" alt="">
+			</div>
+		</div>
+		
+		<div class="diagram">
+			<div class="greaThanTwo">
+				<h4 class="title">5.1 被攻击主机IP top10</h4>
+				<table class="evidence">
+					<thead>
+						<tr>
+							<th>被攻击IP</th>
+							<th>攻击类型</th>
+							<th>被攻击次数</th>
+							<th>IP归属地</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="Segment essme">
+				<div class="report_assessment">
+					<img src="../themes/images/st.png" alt="">
+				</div>
+			</div>
+		</div>
+		
+		<div class="diagram">
+			<div class="greaThanTwo">
+				<h4 class="title">5.2 被攻击主机IP top10</h4>
+				<table class="evidence">
+					<thead>
+						<tr>
+							<th>被攻击IP</th>
+							<th>攻击类型</th>
+							<th>被攻击次数</th>
+							<th>IP归属地</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="Segment essme">
+				<div class="report_assessment">
+					<img src="../themes/images/st.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="diagram">
+			<div class="greaThanTwo">
+				<h4 class="title">5.3 被攻击主机IP top10</h4>
+				<table class="evidence">
+					<thead>
+						<tr>
+							<th>被攻击IP</th>
+							<th>攻击类型</th>
+							<th>被攻击次数</th>
+							<th>IP归属地</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="Segment essme">
+				<div class="report_assessment">
+					<img src="../themes/images/st.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="diagram">
+			<div class="greaThanTwo">
+				<h4 class="title">5.4 被攻击主机IP top10</h4>
+				<table class="evidence">
+					<thead>
+						<tr>
+							<th>被攻击IP</th>
+							<th>攻击类型</th>
+							<th>被攻击次数</th>
+							<th>IP归属地</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+						<tr>
+							<td class="attacked">192.168.1.2</td>
+							<td>Web漏洞攻击（100）
+							<br/>
+							Sql注入攻击（100）
+							<br/>
+							获取用户信息（20）
+							<br/>
+							</td>
+							<td class="frequency">246</td>
+							<td>福建福州</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="Segment essme">
+				<div class="report_assessment">
+					<img src="../themes/images/st.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 六、危害说明 -->
+	<div class="reportContan container" id="harmThat">
+		<h1 class="headings">六、危害说明</h1>
+
+		<div class="harm">
+			<h4 class="title">
+				6.1. 黑链
+			</h4>
+			<dl>
+				<dt>危害描述:</dt>
+				<dd>
+					<ul>
+						<li>
+							指一些人用非正常的手段获取的其它网站的反向链接，最常见的黑链就是通过各种网站程序漏洞获取搜索引擎	权重或者PR较高的网站的webshell，进而在被黑网站上链接自己的网站。
+						</li>
+					</ul>
+				</dd>
+				<dt>建议:</dt>
+				<dd>
+					<ul>
+						<li>检测网站死链接等等。。。。。。</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="harm">
+			<h4 class="title">
+				6.2. Webshell后门木马
+			</h4>
+			<dl>
+				<dt>危害描述:</dt>
+				<dd>
+					<ul>
+						<li>
+							webshell就是以asp、php、jsp或者cgi等网页文件形式存在的一种命令执行环境，也可以将其称做为一种网页后门。黑客在入侵了一个网站后，通常会将asp或php后门文件与网站服务器WEB目录下正常的网页文件混在一起，然后就可以使用浏览器来访问asp或者php后门，得到一个命令执行环境，以达到控制网站服务器的目的。
+						</li>
+					</ul>
+				</dd>
+				<dt>建议:</dt>
+				<dd>
+					<ul>
+						<li>1、建议用户通过ftp来上传、维护网页，尽量不安装asp的上传程序。</li>
+						<li>2、对asp上传程序的调用一定要进行身份认证，并只允许信任的人使用上传程序。</li>
+						<li>3、asp程序管理员的用户名和密码要有一定复杂性，不能过于简单，还要注意定期更换。</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>	
+
+		<div class="harm">
+			<h4 class="title">
+				6.3. 僵尸病毒
+			</h4>
+			<dl>
+				<dt>危害描述:</dt>
+				<dd>
+					<ul>
+						<li>
+							通过连接IRC服务器进行通信从而控制被攻陷的计算机。
+						</li>
+					</ul>
+				</dd>
+				<dt>建议:</dt>
+				<dd>
+					<ul>
+						<li>可以通过清除注册表的方式在正常模式下清除蠕虫。</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="harm">
+			<h4 class="title">
+				6.4. SQL注入
+			</h4>
+			<dl>
+				<dt>危害描述:</dt>
+				<dd>
+					<ul>
+						<li>
+							通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。
+						</li>
+					</ul>
+				</dd>
+				<dt>建议:</dt>
+				<dd>
+					<ul>
+						<li>1.永远不要信任用户的输入。对用户的输入进行校验，可以通过正则表达式，或限制长度；对单引号和双"-"进行转换等。</li>
+						<li>2.永远不要使用动态拼装sql，可以使用参数化的sql或者直接使用存储过程进行数据查询存取。</li>
+						<li>3.永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接。</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="harm">
+			<h4 class="title">
+				6.5. 0day漏洞利用
+			</h4>
+			<dl>
+				<dt>危害描述:</dt>
+				<dd>
+					<ul>
+						<li>
+							信息安全意义上的0Day是指在系统商在知晓并发布相关补丁前就被掌握或者公开的漏洞信息。
+						</li>
+					</ul>
+				</dd>
+				<dt>建议:</dt>
+				<dd>
+					<ul>
+						<li>及时了解官方动态，更新官方补丁</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>		
+	</div>
+
+</body>
+<script type="text/javascript" src="../js/riskReports.js"></script>
+<script type="text/javascript" src="../js/riskCharts.js"></script>
+<script type="text/javascript" src="../js/eventDistribution.js"></script>
+<script type="text/javascript" src="../js/totalEvents.js"></script>
+</html>
