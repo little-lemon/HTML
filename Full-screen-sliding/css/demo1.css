@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#container, .sections, .section {
+  height: 100%;
+  width: 100%;
+}
+
+#section0 {
+  background-image: url(../images/1.jpg);
+}
+
+#section1 {
+  background-image: url(../images/2.jpg);
+}
+
+#section2 {
+  background-image: url(../images/3.jpg);
+}
+
+#section3 {
+  background-image: url(../images/4.jpg);
+}
+
+.left {
+  float: left;
+}
