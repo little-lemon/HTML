@@ -1,0 +1,80 @@
+::-webkit-scrollbar
+{
+    width: 0px;    
+}
+
+.mycontainer{
+	width: 100%;
+	padding: 8px 1%;
+	/* min-width: 1120px;
+	max-width: 1920px; */
+	padding-top: 0;
+}
+/*头部按钮样式*/
+.headicon{
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.headicon span{
+	position: relative;
+	top:2px;
+}
+.headicon:hover{
+	color: #FFFFFF;
+}
+
+.querybtnarea{
+	width: 65px;
+	height: 25px;
+	color: #FFFFFF;
+	background-color: #01b4ec;
+	font-size: 12px;
+	margin-right: 10px;
+	padding: 2px 0;
+	/*margin-top: -50px;*/
+	float: right;
+	white-space: nowrap;
+	cursor: pointer;    
+    border: 1px solid transparent;
+    border-radius: 4px;   
+    text-align: center;
+	
+}
+/*隐藏搜索框按钮区域*/
+.downarea{
+	text-align: center;
+	width:50%;
+	margin:0 auto;
+}
+/*向下箭头*/
+.downarrow{
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 22px;
+	display:block;
+	margin:0 auto;
+	/*position: absolute;*/
+	/*background: url(../images/expand.png);*/
+}
+.downarrow:hover{	
+	color: #FFFFFF;	
+}
+
+.direction{
+	width:16px;
+	height:16px;
+	background: url(../images/expand-down-up.png) no-repeat;
+	margin: 0 auto;
+}
+
+ 
+.trhover:hover{ 	
+ 	background-color: #0c5575;
+ }
+
+
+@media screen and (max-width: 767px){
+	.table-responsive {
+		border: 0;
+	}	
+}

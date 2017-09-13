@@ -1,0 +1,443 @@
+/*标题*/
+h1.headings{
+	width: 100%;
+	background-color: #1578C9;
+	color:#fff;
+	font-size: 20px;
+	padding:8px 2%;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+h1.mgtop{
+	margin-top: 20px;
+}
+.report_contain{
+	width: 100%;
+	padding:20px 13px;
+	box-sizing: border-box;
+	font-size: 16px;
+	color:#424242;
+	text-indent: 50px;
+	line-height: 1.9;
+	letter-spacing: .5px;
+	padding-top: 0;
+}
+
+/*小备注*/
+.report_time{
+	font-size: 16px;
+	margin: 20px 0 10px;
+}
+.report_time.cus{
+	color:#5B5B5B;
+}
+
+/*图表*/
+.essme{
+	margin-top: 20px;
+}
+.report_assessment{
+	width: 100%;
+	height: 303px;
+	border: 1px solid #D8D8DA;
+	margin-bottom: 20px;
+	position: relative;
+}
+.report_assessment img{
+	width: 100%;
+}
+.report_assessment .riskGuage{
+	width: 100%;
+	height: 100%;
+}
+.report_assessment .riskLevel{
+	position: absolute;
+    top: 22px;
+    width: 100%;
+    text-align: center;
+    color: #434343;
+    font-size: 17px;
+}
+.report_assessment .riskLevel span{
+	font-size: 22px;
+	color:#EB2F2F;
+}
+.report_assessment .evaluation{
+	position: absolute;
+	width: 100%;
+	left:0;
+	bottom: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.report_assessment .eventDistribution{
+	width: 100%;
+	height: 100%;
+}
+
+.report_assessment .totalEvents{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*1-2-1表格*/
+.report_item{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.report_item .report_header{
+	background-color: #E9F3FF;
+	font-size: 16px;
+    padding:8px 10px;
+    margin-bottom: 1px;
+    color:#254E80;
+}
+.report_item .report_table{
+	width: 100%;
+	border: 1px solid #D8D8DA;
+	font-size: 14px;
+}
+.report_item .report_table .report_two{
+	width: 25%;
+	height: 100%;
+	border-right: 1px solid #D8D8DA;
+	box-sizing: border-box;
+	float: left;
+}
+.report_table .report_two .report_graphic{
+	width: 80%;
+	height:auto;
+	margin:0 auto;
+	position: relative;
+}
+.report_two .report_graphic img{
+	margin: 0 auto;
+}
+.report_two .report_graphic .report_remark{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+} 
+.report_graphic .report_remark span{
+	color:#EC5050;
+	font-weight: bold;
+}
+
+.report_item .report_table .report_four{
+	width: 40%;
+	height: 100%;
+	border-right: 1px solid #D8D8DA;
+	box-sizing: border-box;
+	float: left;
+}
+.report_table .report_four .report_items{
+	width: 100%;
+	padding:20px 16px;
+	
+}
+.report_table .report_four .report_items span{
+	color:#FFD050;
+	font-size: 16px;
+}
+.report_table .report_four .cus{
+	border-bottom: 1px solid #D8D8DA;
+}
+.report_table .report_four .cus span{
+	color:#5F8AEC;
+	font-size: 14px;
+}
+.report_table .report_four ul{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.report_table .report_four ul li{
+	line-height: 1.8;
+}
+.report_table .report_four ul li.sj{
+	text-indent: 20px;
+}
+.report_table .report_four ul li.caption{
+	color:#F5AC47;
+}
+.report_item .report_table .report_three{
+	width: 35%;
+	height: auto;
+	padding:20px; 
+	float: left;
+}
+.report_table .report_three ul {
+	position: relative;
+}
+.report_table .report_three ul li{
+	width: 100%;
+	height: auto;
+	letter-spacing: 1px;
+	line-height: 2;
+}
+
+.report_table .report_three ul li span{
+	color:#EB3030;
+	font-size: 16px;
+}
+
+/*--列数大于2的表格--*/
+.greaThanTwo{
+	width: 100%;
+	height:auto;
+}
+.greaThanTwo h4{
+	background-color: #DEEDFF;
+	margin-bottom: 1px;
+	padding: 10px 10px 7px;
+	color:#194479;
+	font-size: 16px;
+}
+.greaThanTwo table{
+	width: 100%;
+	text-align: center;
+}
+
+.greaThanTwo .strve thead tr{
+	background-color: #EBEFF4;
+}
+.greaThanTwo .strve thead th{
+	text-align: center;
+	font-weight: 500;
+	color:#4C4C4C;
+	font-size: 15px;
+	padding: 6px 0;
+	width: 16.6%;
+}
+.greaThanTwo .strve tbody td{
+    border: 1px solid #EDF1F5;
+    padding: 30px 15px;
+    line-height: 1.6;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.greaThanTwo  tbody td.attacked{
+	color:#7699EE;
+}
+.greaThanTwo  tbody td.classification{
+	color:#F55757;
+	text-align: center;
+}
+.greaThanTwo  tbody td.condition{
+	color:#F55757;
+	font-weight: bold;
+	text-align: center;
+}
+.greaThanTwo  tbody td.frequency{
+	color:#234B7D;
+	text-align: center;
+}
+
+.greaThanTwo .evidence thead tr{
+	background-color: #EBEFF4;
+}
+.greaThanTwo .evidence thead th{
+	text-align: center;
+	font-weight: 500;
+	color:#4C4C4C;
+	font-size: 15px;
+	padding: 6px 0;
+	width: 25%;
+}
+.greaThanTwo .evidence tbody td{
+    border: 1px solid #EDF1F5;
+    padding: 30px 15px;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.greaThanTwo .event thead tr{
+	background-color: #EBEFF4;
+}
+.greaThanTwo .event thead th{
+	text-align: center;
+	font-weight: 500;
+	color:#4C4C4C;
+	font-size: 15px;
+	padding: 6px 0;
+	width: 20%;
+}
+.greaThanTwo .event thead th.widts{
+	width: 80%;
+	text-align: left;
+	padding-left: 40px;
+}
+.greaThanTwo .event tbody td{
+    border: 1px solid #EEEDED;
+    padding: 30px 15px;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.greaThanTwo .event td.blueBackground{
+	background-color: #E9F3FF;
+}
+.greaThanTwo .event td.particulars{
+	text-align: left;
+	padding-left: 25px;
+}
+
+
+
+/*查看附录*/
+.appendix{
+	font-size: 16px;
+    padding: 16px 0 25px;
+    color:#535353;
+}
+.appendix.cus{
+	padding: 16px 0;
+}
+.appendix a{
+	color:#244A7C;
+	font-size: 19px;
+	margin:0 10px;
+	font-weight: bold;
+}
+
+
+.harm {
+    width: 100%;
+    height: auto;
+}
+.harm h4 {
+    background-color: #DEEDFF;
+    padding: 10px 10px 7px;
+    color: #194479;
+    font-size: 16px;
+}
+.harm  dl{
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding:10px 15px;
+	font-size: 15px;
+}
+.harm  dl dt{
+	color:#5986EC;
+	margin-bottom: 5px;
+}
+
+.harm  dl dd{
+    color: #717171;
+    text-indent: 40px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/*攻击事件，攻击举证*/
+.proof{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+.proof h5{
+	font-size: 16px;
+	padding: 17px 0 22px 9px;
+	font-weight: bold;
+	color:#626262;
+}
+.proof .attack_proof{
+	font-size: 15px;
+	padding: 0px 0 20px 11px;
+	color:#1D1D1D;
+}
+.proof .transitions{
+	width: 96%;
+	height: auto;
+	margin:0 2%;
+}
+.proof .transitions dl{
+	float: left;
+}
+.proof .transitions dl dt{
+	position: relative;
+	height:30px;
+}
+.proof .transitions dl .sequence{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color:#fff;
+	text-align: center;
+    line-height: 2.2;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 99;
+}
+.proof .transitions dl .colorBar{
+    width: 93%;
+    height: 10px;
+    position: absolute;
+    right: -1px;
+    top: 10px;
+    background:red; /* 一些不支持背景渐变的浏览器 */  
+   
+}
+.proof .transitions dl .two{
+	background:-moz-linear-gradient(left, #6CB5B5,#FFD800,#E14949);  
+    background:-webkit-linear-gradient(left, #6CB5B5,#FFD800,#E14949);  
+    background:-o-linear-gradient(left, #6CB5B5,#FFD800,#E14949);
+}
+.proof .transitions dl .three_0{
+	background:-moz-linear-gradient(left, #6CB5B5,#FFD800);  
+    background:-webkit-linear-gradient(left, #6CB5B5,#FFD800);  
+    background:-o-linear-gradient(left, #6CB5B5,#FFD800);
+}
+.proof .transitions dl .three_1{
+	background:-moz-linear-gradient(left, #FFD800,#E14949);  
+    background:-webkit-linear-gradient(left, #FFD800,#E14949);  
+    background:-o-linear-gradient(left, #FFD800,#E14949);
+}
+
+.proof .transitions dl dd{
+	width: 100%;
+}
+.proof .transitions dl dd .pic{
+	width: 12%;
+	float: left;
+	margin-left: -7px;
+    margin-top: 10px;
+}
+.proof .transitions dl dd .news{
+	float: left;
+	width: 80%;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.proof .news h6{
+    font-size: 15px;
+    padding: 11px 0 7px 0;
+}
+.proof .news .green{
+	color:#86C1C1;
+}
+.proof .news .red{
+	color:#E14949;
+}
+.proof .news .yellow{
+	color:#FAD901;
+}
+.proof .news .data_time{
+	line-height: 1.8;
+    padding-left: 5px;
+}
+.proof .news .attack_number{
+	padding-left: 13px;
+}
+
+
