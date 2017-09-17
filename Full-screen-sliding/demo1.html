@@ -9,27 +9,44 @@
     <link rel="stylesheet" href="./css/demo1.css">
 </head>
 <body>
-<div id="container">
-    <div class="sections" style="width:400%">
-        <div id="section0" class="section left">
-            <h3>this is the page</h3>
+<div id="container" data-PageSwitch>
+    <div class="sections">
+        <div id="section0" class="section active">
+            <div class="intro">
+                <h1 class="title">switchPage</h1>
+                <p>Create Beautiful Fullscreen Scrolling Websites</p>
+            </div>
         </div>
-        <div id="section1" class="section left">
-            <h3>this is the page</h3>
+        <div id="section1" class="section">
+            <div class="intro">
+                <h1 class="title">Example</h1>
+                <p>HTML markup example to define 4 sections</p>
+                <img src="images/example.png"/>
+            </div>
         </div>
-        <div id="section2" class="section left">
-            <h3>this is the page</h3>
+        <div id="section2" class="section">
+            <div class="intro">
+                <h1 class="title">Example</h1>
+                <p>The plug-in configuration parameters</p>
+                <img src="images/example2.png"/>
+            </div>
         </div>
-        <div id="section3" class="section left">
-            <h3>this is the page</h3>
+        <div id="section3" class="section">
+            <div class="intro">
+                <h1 class="title">THE END</h1>
+                <p>Everything will be okay in the end. If it's not okay, it's not the end.</p>
+            </div>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript"  src="./js/pageswitch-copy.js"></script>
 <script>
-$("#container").PageSwitch({
+/*$("#container").PageSwitch({
     direction:"herizontal"
+    index:3;
 });
-$("#container").PageSwitch("init");
+$("#container").PageSwitch("init");*/
 </script>
 </body>
 </html>
